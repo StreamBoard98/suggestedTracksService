@@ -1,11 +1,11 @@
+const mongoose = require('mongoose');
 const data = require('./randomDataValGen.js');
 
-const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/suggestedTracks');
 
 const db = mongoose.connection;
 db.on('error', () => console.log('error connecting to mongo'));
-db.once('open', () => console.log('has conected to mongo'));
+db.once('open', () => console.log('has connected to mongo'));
 
 const trackSchema = mongoose.Schema({
   id: { type: Number, unique: true },
@@ -20,11 +20,9 @@ const trackSchema = mongoose.Schema({
 });
 
 const Track = mongoose.model('Track', trackSchema);
-console.log(data.sampleData)
 
 for (let i = 0; i < data.sampleData.length; i += 1) {
   const trackDocument = new Track(data.sampleData[i]);
-  console.log(trackDocument);
   trackDocument.save((error, data) => {
     if (error) {
       console.log('error saving document');
@@ -41,5 +39,3 @@ Track.find((error, tracks) => {
     console.log('here are the tracks', tracks);
   }
 });
-//need to crete a new document for each track
-//pass each track object as the the property list to Track constructor
