@@ -4,7 +4,12 @@ const path = require('path');
 
 app.listen(4001, () => console.log('App connected on port 4001'));
 
-// app.get('/', (req, res) => res.send('WTF'));
 app.use(express.static(path.join(__dirname, '../client/dist')));
-console.log(path.join(__dirname, '../client/dist'));
 
+app.get('/songs/:id/suggestedTracks', (req, res) => {
+  res.send('get request');
+});
+
+app.put('/suggestedTracks/:id/:category', (req, res) => {
+  res.send('put request');
+});
