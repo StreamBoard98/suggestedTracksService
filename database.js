@@ -8,7 +8,7 @@ db.on('error', () => console.log('error connecting to mongo'));
 db.once('open', () => console.log('has conected to mongo'));
 
 const trackSchema = mongoose.Schema({
-  id: Number,
+  id: { type: Number, unique: true },
   title: String,
   artist: String,
   genre: String,
@@ -20,7 +20,7 @@ const trackSchema = mongoose.Schema({
 });
 
 const Track = mongoose.model('Track', trackSchema);
-// console.log(data.sampleData)
+console.log(data.sampleData)
 
 for (let i = 0; i < data.sampleData.length; i += 1) {
   const trackDocument = new Track(data.sampleData[i]);
@@ -33,5 +33,13 @@ for (let i = 0; i < data.sampleData.length; i += 1) {
     }
   });
 }
+
+Track.find((error, tracks) => {
+  if (error) {
+    console.log('couldnt find tracks');
+  } else {
+    console.log('here are the tracks', tracks);
+  }
+});
 //need to crete a new document for each track
 //pass each track object as the the property list to Track constructor
