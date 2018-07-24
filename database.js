@@ -42,10 +42,26 @@ const Track = mongoose.model('Track', trackSchema);
 
 const retrieveSuggestedTracks = (songId, afterRetrieve) => {
   Track.find({ id: songId }, (error, result) => {
-    Track.find({ genre: result[0].genre }, (error, result) => {
-      afterRetrieve(result);
+    if (!error) {
+      Track.find({ genre: result[0].genre }, (error, result) => {
+        if (error) {
+          afterRetrieve(error);
+        } else {
+          afterRetrieve(result);
+        }
+      });
+    }
+  });
+};
+
+const incrementMetric = (songId, metric, afterIncrementation) => {
+  Track.update({ id: songId }, { $inc: { metric: 1 } }, () => {
+    Track.find({ id: songId }, (error, result) => {
+      console.log(result);
+      afterIncrementation(result);
     });
   });
 };
 
 exports.retrieveSuggestedTracks = retrieveSuggestedTracks;
+exports.incrementMetric = incrementMetric;

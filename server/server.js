@@ -7,12 +7,20 @@ app.listen(4001, () => console.log('App connected on port 4001'));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/songs/:id/suggestedTracks', (req, res) => {
-  let selectedTrackId = req.params.id;
-  mongodatabase.retrieveSuggestedTracks(selectedTrackId, (data) => {
-    res.send(data);
+  const selectedTrackId = req.params.id;
+  mongodatabase.retrieveSuggestedTracks(selectedTrackId, (error, data) => {
+    if (error) {
+      res.send('error retrieving selected tracks');
+    } else {
+      res.send(data);
+    }
   });
 });
 
 app.put('/suggestedTracks/:id/:category', (req, res) => {
-  res.send('put request');
+  const selectedTrackId = req.params.id;
+  const selectedTrackMetric = req.params.category;
+  mongodatabase.incrementMetric(selectedTrackId, selectedTrackMetric, (error, result) => {
+    res.send(result);
+  });
 });
