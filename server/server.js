@@ -21,6 +21,7 @@ app.put('/suggestedTracks/:id/:category', (req, res) => {
   const selectedTrackId = req.params.id;
   const selectedTrackMetric = req.params.category;
   mongodatabase.incrementMetric(selectedTrackId, selectedTrackMetric, (error, result) => {
+    console.log('the result', result);
     res.send(result);
   });
 });
