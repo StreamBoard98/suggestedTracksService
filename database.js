@@ -21,21 +21,29 @@ const trackSchema = mongoose.Schema({
 
 const Track = mongoose.model('Track', trackSchema);
 
-for (let i = 0; i < data.sampleData.length; i += 1) {
-  const trackDocument = new Track(data.sampleData[i]);
-  trackDocument.save((error, data) => {
-    if (error) {
-      console.log('error saving document');
-    } else {
-      console.log('document successfully saved', data);
-    }
-  });
-}
+// for (let i = 0; i < data.sampleData.length; i += 1) {
+//   const trackDocument = new Track(data.sampleData[i]);
+//   trackDocument.save((error, data) => {
+//     if (error) {
+//       console.log('error saving document');
+//     } else {
+//       console.log('document successfully saved', data);
+//     }
+//   });
+// }
 
-Track.find((error, tracks) => {
-  if (error) {
-    console.log('couldnt find tracks');
-  } else {
-    console.log('here are the tracks', tracks);
-  }
-});
+// Track.find((error, tracks) => {
+//   if (error) {
+//     console.log('couldnt find tracks');
+//   } else {
+//     console.log('here are the tracks', tracks);
+//   }
+// });
+
+const retrieveSuggestedTracks = (songId, afterRetrieve) => {
+  Track.find({ id: songId }, (error, result) => {
+    afterRetrieve(result);
+  });
+};
+
+exports.retrieveSuggestedTracks = retrieveSuggestedTracks;
