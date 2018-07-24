@@ -42,7 +42,9 @@ const Track = mongoose.model('Track', trackSchema);
 
 const retrieveSuggestedTracks = (songId, afterRetrieve) => {
   Track.find({ id: songId }, (error, result) => {
-    afterRetrieve(result);
+    Track.find({ genre: result[0].genre }, (error, result) => {
+      afterRetrieve(result);
+    });
   });
 };
 
