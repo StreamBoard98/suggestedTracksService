@@ -24,7 +24,7 @@ app.put('/suggestedTracks/:id/:category', (req, res) => {
     if (error) {
       console.log('error fetching');
     } else {
-      //pass this data to the component to be displayed on the button
+      // pass this data to the component to be displayed on the button
       console.log('the result of incrementation', result);
     }
     res.send(result);
