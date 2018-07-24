@@ -54,16 +54,13 @@ const retrieveSuggestedTracks = (songId, afterRetrieve) => {
   });
 };
 
-
-//note: this works when key 'metric' is replaced with 'likes'.
-//need to somehow make it recognize metric as a variable
 const incrementMetric = (songId, metric, afterIncrementation) => {
   let fieldToIncrement = {};
   fieldToIncrement[metric] = 1;
   Track.update({ id: songId }, { $inc: fieldToIncrement }, () => {
     Track.find({ id: songId }, (error, result) => {
-      console.log(result);
-      afterIncrementation(result);
+      // console.log('result is', result);
+      afterIncrementation(error, result);
     });
   });
 };

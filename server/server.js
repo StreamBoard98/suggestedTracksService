@@ -21,7 +21,12 @@ app.put('/suggestedTracks/:id/:category', (req, res) => {
   const selectedTrackId = req.params.id;
   const selectedTrackMetric = req.params.category;
   mongodatabase.incrementMetric(selectedTrackId, selectedTrackMetric, (error, result) => {
-    console.log('the result', result);
+    if (error) {
+      console.log('error fetching');
+    } else {
+      //pass this data to the component to be displayed on the button
+      console.log('the result of incrementation', result);
+    }
     res.send(result);
   });
 });
