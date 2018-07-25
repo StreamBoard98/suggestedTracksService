@@ -45,9 +45,9 @@ const retrieveSuggestedTracks = (songId, afterRetrieve) => {
     if (!error) {
       Track.find({ genre: result[0].genre }, (error, result) => {
         if (error) {
-          afterRetrieve(error);
+          afterRetrieve(error, null);
         } else {
-          afterRetrieve(result);
+          afterRetrieve(null, result);
         }
       });
     }
