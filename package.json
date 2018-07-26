@@ -8,11 +8,13 @@
   },
   "scripts": {
     "start": "nodemon server/server.js",
-    "react-dev": "webpack -d --watch"
+    "react-dev": "webpack -d --watch",
+    "test": "jest"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "jest": "^23.4.1",
     "mongoose": "^5.2.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
