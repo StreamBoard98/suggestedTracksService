@@ -11,19 +11,9 @@ const SuggestedTrackBox = styledComponents.div`
 class App extends React.Component {
   render() {
     return (
-      <SuggestedTrackBox>
-        <div>
-          <h3>
-            <i className="fas fa-music" />
-            Related Tracks
-          </h3>
-          <hr/>
-        </div>
-      <div> 
-        Mydiv will now render this
-      </div>
-      <SuggestedTrackList />
-      </SuggestedTrackBox>
+      <div>
+    <SuggestedTrackList />
+    </div>
     );
   }
 }
