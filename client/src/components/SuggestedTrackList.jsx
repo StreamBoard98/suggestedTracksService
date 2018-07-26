@@ -25,4 +25,4 @@ const SuggestedTrackList = (props) => {
 //   suggestedTracks: React.PropTypes.array.isRequired
 // };
 
-window.SuggestedTrackList = SuggestedTrackList;
+export default SuggestedTrackList;

@@ -5,7 +5,10 @@ import SuggestedTrackList from './components/SuggestedTrackList.jsx';
 class App extends React.Component {
   render() {
     return (
-      <div> Mydiv </div>
+      <div>
+      <div> Mydiv will now render this</div>
+      <SuggestedTrackList />
+      </div>
     );
   }
 }
