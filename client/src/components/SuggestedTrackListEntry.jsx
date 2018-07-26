@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Flexbox from 'flexbox-react';
 const SuggestedTrackEntryBox = styled.div`
   border: 3px solid green;
 `;
@@ -26,6 +27,7 @@ const SuggestedTrackListEntry = (props) => {
      <Text>
        Artist
      </Text>
+     <Flexbox element='span' justifyContent= 'space-between' width='300px'>
      <BottomIcons>
        <Text><i class="fas fa-play"></i> &nbsp; Plays</Text>
      </BottomIcons>
@@ -38,6 +40,7 @@ const SuggestedTrackListEntry = (props) => {
      <BottomIcons>
        <Text><i class="fas fa-comment-alt"></i> &nbsp; Comments</Text>
      </BottomIcons>
+     </Flexbox>
     </SuggestedTrackEntryBox>
    </div>
   );
