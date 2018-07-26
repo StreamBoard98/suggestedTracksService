@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Flexbox from 'flexbox-react';
-const SuggestedTrackEntryBox = styled.div`
+const SuggestedTrackEntryBox = styled.span`
   border: 3px solid green;
+  display: inline-block;
 `;
 
 const BottomIcons = styled.button`
@@ -11,7 +12,7 @@ const BottomIcons = styled.button`
 `;
 
 const Text = styled.p`
-  font-size: 8px;
+  font-size: 12px;
   font-family: Montserrat
   color: pink;
 `;
