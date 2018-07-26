@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SuggestedTrackListEntry from './SuggestedTrackListEntry.jsx';
 const SuggestedTrackBox = styled.div`
   margin: 2px;
   border: 1px solid lightgray;
@@ -21,6 +22,7 @@ const SuggestedTrackList = (props) => {
           <HorizontalLine/>
       <div>
         <h2> 
+        <SuggestedTrackListEntry />
         suggestedtrack entry goes here 
         </h2>
       </div>

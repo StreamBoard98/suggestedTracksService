@@ -4,8 +4,15 @@ const SuggestedTrackEntryBox = styled.div`
   border: 3px solid green;
 `;
 
-const BottomIcons = styled.div`
+const BottomIcons = styled.button`
   border: 1px solid pink;
+  background: transparent
+`;
+
+const Text = styled.p`
+  font-size: 8px;
+  font-family: Montserrat
+  color: pink;
 `;
 
 const SuggestedTrackListEntry = (props) => {
@@ -13,23 +20,23 @@ const SuggestedTrackListEntry = (props) => {
   <div>
    <SuggestedTrackEntryBox> 
      <img src ="http://www.rw-designer.com/res/vsti.png"/>
-     <h6>
+     <Text>
        Title
-     </h6>
-     <h6>
+     </Text>
+     <Text>
        Artist
-     </h6>
+     </Text>
      <BottomIcons>
-       <p><i class="fas fa-play"></i> &nbsp; Plays</p>
+       <Text><i class="fas fa-play"></i> &nbsp; Plays</Text>
      </BottomIcons>
      <BottomIcons>
-       <p><i class="far fa-heart"></i> &nbsp; Likes</p>
+       <Text><i class="far fa-heart"></i> &nbsp; Likes</Text>
      </BottomIcons>
      <BottomIcons>
-       <p><i class="fas fa-retweet"></i> &nbsp; Shares</p>
+       <Text><i class="fas fa-retweet"></i> &nbsp; Shares</Text>
      </BottomIcons>
      <BottomIcons>
-       <p><i class="fas fa-comment-alt"></i> &nbsp; Comments</p>
+       <Text><i class="fas fa-comment-alt"></i> &nbsp; Comments</Text>
      </BottomIcons>
     </SuggestedTrackEntryBox>
    </div>
