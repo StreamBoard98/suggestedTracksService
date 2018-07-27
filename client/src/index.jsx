@@ -62,10 +62,31 @@ class App extends React.Component {
     });
   }
 
+  convertToReadable(value) {
+    let result;
+    if (value < 10000) {
+      result = value;
+    } else if (value >= 10000 && value < 100000) {
+      let str = String(value);
+      result = str[0] + str[1] + '.' + str[2] + 'K';
+    } else if (value >= 100000 && value < 1000000) {
+      let str = String(value);
+      result = Math.floor(value/1000) + 'K';
+    } else if (value >= 1000000 && value < 10000000) {
+      let str = String(value);
+      result = str[0] + '.' + str[1] + str[2] + 'M';
+    } else {
+      let str = String(value);
+      result = str[0] + str[1] + '.' + str[2] + 'M';
+    }
+    return result;
+  }
+
+
   render() {
     return (
       <div>
-        <SuggestedTrackList suggestedTracks={ this.state.suggestedTracks } />
+        <SuggestedTrackList suggestedTracks={ this.state.suggestedTracks } convertToReadable = { this.convertToReadable } />
       </div>
     );
   }

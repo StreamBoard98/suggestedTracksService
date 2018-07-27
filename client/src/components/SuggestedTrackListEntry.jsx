@@ -47,6 +47,8 @@ const Icons = styled.div`
 `;
 
 const SuggestedTrackListEntry = (props) => {
+  const { convertToReadable } = props;
+
   return (
     <div>
       <SuggestedTrackEntryBox>
@@ -56,31 +58,31 @@ const SuggestedTrackListEntry = (props) => {
           </Image>
           <Artist>
             <Text>
-              Artist
+              { props.track.artist }
             </Text>
           </Artist>
           <Title>
             <Text>
-              Title
+              { props.track.title }
             </Text>
           </Title>
           <Icons>
             <Flexbox element="span" justifyContent="space-between" width="240px">
               <BottomIcons>
                 <i className="fas fa-play" />
-                &nbsp; 10m
+                &nbsp; { convertToReadable(props.track.plays) }
               </BottomIcons>
               <BottomIcons>
                 <i className="far fa-heart" />
-                &nbsp; 569k
+                &nbsp; { convertToReadable(props.track.likes) }
               </BottomIcons>
               <BottomIcons>
                 <i className="fas fa-retweet" />
-                &nbsp; 24.7k
+                &nbsp; { convertToReadable(props.track.shares) }
               </BottomIcons>
               <BottomIcons>
                 <i className="fas fa-comment-alt" />
-                &nbsp; 3968
+                &nbsp; { convertToReadable(props.track.comments) }
               </BottomIcons>
             </Flexbox>
           </Icons>
@@ -89,9 +91,5 @@ const SuggestedTrackListEntry = (props) => {
     </div>
   );
 };
-
-// SuggestedTrackListEntry.propTypes = {
-//   suggestedTrack: React.PropTypes.object.isRequired
-// };
 
 export default SuggestedTrackListEntry;
