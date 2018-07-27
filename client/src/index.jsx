@@ -20,13 +20,12 @@ class App extends React.Component {
     $.ajax('/songs/1/suggestedTracks', {
       method: 'GET',
       error: (error) => {
-        console.log('error with getting data', error);
+        console.log('error with getting data');
       },
       success: (data) => {
-        console.log('successfully got', data);
+        console.log('successfully got data');
         context.setState({ currentTrack: data[0] });
         context.setState({ songsOfSameGenre: data }, () => {
-          console.log(context.state.songsOfSameGenre);
           this.displayThreeSuggestions();
         });
       },
@@ -38,10 +37,10 @@ class App extends React.Component {
     $.ajax('/suggestedTracks/:id/:category', {
       method: 'PUT',
       error: (error) => {
-        console.log('error with incrementing data', error);
+        console.log('error with incrementing data');
       },
       success: (data) => {
-        console.log('successfully got', data);
+        console.log('successfully got');
       },
     });
   }
@@ -52,14 +51,11 @@ class App extends React.Component {
     let x = 0;
     while (x < 3) {
       let randomIndex = Math.floor(Math.random() * (arrayOfTracks.length - 1) + 1);
-      console.log(randomIndex);
       randomTracks.push(arrayOfTracks[randomIndex]);
       arrayOfTracks.splice(randomIndex, 1);
       x += 1;
     }
-    this.setState({ suggestedTracks: randomTracks }, () => {
-      console.log(this.state.suggestedTracks);
-    });
+    this.setState({ suggestedTracks: randomTracks });
   }
 
   convertToReadable(value) {
