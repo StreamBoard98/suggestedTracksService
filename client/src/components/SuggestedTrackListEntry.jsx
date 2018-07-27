@@ -47,40 +47,56 @@ const Icons = styled.div`
 `;
 
 const SuggestedTrackListEntry = (props) => {
+  const {
+    convertToReadable,
+    track: {
+      artist,
+      title,
+      plays,
+      likes,
+      shares,
+      comments,
+    },
+  } = props;
+
   return (
     <div>
       <SuggestedTrackEntryBox>
         <Grid>
           <Image>
-            <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="" width="50px" /> 
+            <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="" width="50px" />
           </Image>
           <Artist>
             <Text>
-              Artist
+              { artist }
             </Text>
           </Artist>
           <Title>
             <Text>
-              Title
+              { title }
             </Text>
           </Title>
           <Icons>
             <Flexbox element="span" justifyContent="space-between" width="240px">
               <BottomIcons>
                 <i className="fas fa-play" />
-                &nbsp; 10m
+                &nbsp;
+                { convertToReadable(plays) }
               </BottomIcons>
               <BottomIcons>
                 <i className="far fa-heart" />
-                &nbsp; 569k
+                &nbsp;
+                { convertToReadable(likes) }
               </BottomIcons>
               <BottomIcons>
                 <i className="fas fa-retweet" />
-                &nbsp; 24.7k
+                &nbsp;
+                { convertToReadable(shares) }
               </BottomIcons>
               <BottomIcons>
                 <i className="fas fa-comment-alt" />
-                &nbsp; 3968
+                &nbsp;
+                { convertToReadable(comments) }
               </BottomIcons>
             </Flexbox>
           </Icons>
@@ -89,9 +105,5 @@ const SuggestedTrackListEntry = (props) => {
     </div>
   );
 };
-
-// SuggestedTrackListEntry.propTypes = {
-//   suggestedTrack: React.PropTypes.object.isRequired
-// };
 
 export default SuggestedTrackListEntry;

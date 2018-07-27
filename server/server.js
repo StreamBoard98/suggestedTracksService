@@ -10,12 +10,13 @@ console.log(path.join(__dirname, '../client/dist'));
 
 
 app.get('/songs/:id/suggestedTracks', (req, res) => {
-  const selectedTrackId = req.params.id;
-  mongodatabase.retrieveSuggestedTracks(selectedTrackId, (error, data) => {
+  let selectedTrackId = req.params.id;
+  mongodatabase.retrieveSuggestedTracks(selectedTrackId, (error, dataRows) => {
     if (error) {
       res.send('error retrieving selected tracks');
     } else {
-      res.send(data);
+      console.log('received suggested tracks');
+      res.send(dataRows);
     }
   });
 });
@@ -26,10 +27,11 @@ app.put('/suggestedTracks/:id/:category', (req, res) => {
   mongodatabase.incrementMetric(selectedTrackId, selectedTrackMetric, (error, result) => {
     if (error) {
       console.log('error fetching');
+      res.send('error incrementing');
     } else {
       // pass this data to the component to be displayed on the button
       console.log('the result of incrementation', result);
+      res.send(result);
     }
-    res.send(result);
   });
 });
