@@ -11,8 +11,8 @@ class App extends React.Component {
     this.state = {
       currentTrack: '',
       suggestedTracks: [],
-      threeSuggestions: [],
-    }
+      songsOfSameGenre: [],
+    };
   }
 
   componentDidMount() {
@@ -24,8 +24,9 @@ class App extends React.Component {
       },
       success: (data) => {
         console.log('successfully got', data);
-        context.setState({ suggestedTracks: data }, () => {
-          console.log(context.state.suggestedTracks);
+        context.setState({ currentTrack: data[0] });
+        context.setState({ songsOfSameGenre: data }, () => {
+          console.log(context.state.songsOfSameGenre);
           this.displayThreeSuggestions();
         });
       },
@@ -46,7 +47,7 @@ class App extends React.Component {
   }
 
   displayThreeSuggestions() {
-    let arrayOfTracks = this.state.suggestedTracks.slice();
+    let arrayOfTracks = this.state.songsOfSameGenre.slice();
     let randomTracks = [];
     let x = 0;
     while (x < 3) {
@@ -56,15 +57,15 @@ class App extends React.Component {
       arrayOfTracks.splice(randomIndex, 1);
       x += 1;
     }
-    this.setState({ threeSuggestions: randomTracks }, () => {
-      console.log(this.state.threeSuggestions);
+    this.setState({ suggestedTracks: randomTracks }, () => {
+      console.log(this.state.suggestedTracks);
     });
   }
 
   render() {
     return (
       <div>
-        <SuggestedTrackList />
+        <SuggestedTrackList suggestedTracks={ this.state.suggestedTracks } />
       </div>
     );
   }
