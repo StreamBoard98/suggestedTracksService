@@ -4,10 +4,12 @@ import Flexbox from 'flexbox-react';
 
 const SuggestedTrackEntryBox = styled.div`
   display: inline-block;
+  margin-bottom: 20px;
 `;
 
 const BottomIcons = styled.button`
   border: 1px solid white;
+  color: silver;
   background: transparent
 `;
 
@@ -16,6 +18,7 @@ const Text = styled.p`
   font-family: Arial;
   font-weight: normal;
   margin: -1px;
+  color: silver;
 `;
 
 const Grid = styled.div`
