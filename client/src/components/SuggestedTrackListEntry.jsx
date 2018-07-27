@@ -47,42 +47,56 @@ const Icons = styled.div`
 `;
 
 const SuggestedTrackListEntry = (props) => {
-  const { convertToReadable } = props;
+  const {
+    convertToReadable,
+    track: {
+      artist,
+      title,
+      plays,
+      likes,
+      shares,
+      comments,
+    },
+  } = props;
 
   return (
     <div>
       <SuggestedTrackEntryBox>
         <Grid>
           <Image>
-            <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="" width="50px" /> 
+            <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="" width="50px" />
           </Image>
           <Artist>
             <Text>
-              { props.track.artist }
+              { artist }
             </Text>
           </Artist>
           <Title>
             <Text>
-              { props.track.title }
+              { title }
             </Text>
           </Title>
           <Icons>
             <Flexbox element="span" justifyContent="space-between" width="240px">
               <BottomIcons>
                 <i className="fas fa-play" />
-                &nbsp; { convertToReadable(props.track.plays) }
+                &nbsp;
+                { convertToReadable(plays) }
               </BottomIcons>
               <BottomIcons>
                 <i className="far fa-heart" />
-                &nbsp; { convertToReadable(props.track.likes) }
+                &nbsp;
+                { convertToReadable(likes) }
               </BottomIcons>
               <BottomIcons>
                 <i className="fas fa-retweet" />
-                &nbsp; { convertToReadable(props.track.shares) }
+                &nbsp;
+                { convertToReadable(shares) }
               </BottomIcons>
               <BottomIcons>
                 <i className="fas fa-comment-alt" />
-                &nbsp; { convertToReadable(props.track.comments) }
+                &nbsp;
+                { convertToReadable(comments) }
               </BottomIcons>
             </Flexbox>
           </Icons>
