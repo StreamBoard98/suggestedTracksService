@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Flexbox from 'flexbox-react';
 
 const SuggestedTrackEntryBox = styled.div`
-  border: 3px solid green;
   display: inline-block;
 `;
 
@@ -13,50 +12,44 @@ const BottomIcons = styled.button`
 `;
 
 const Text = styled.p`
-  font-size: 12px;
+  font-size: 14px;
   font-family: Arial;
-  color: pink;
-  padding-top: -10px;
-  padding-bottom; -10px;
-  align: top;
-  justify: top;
+  font-weight: normal;
+  margin: -1px;
 `;
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 60px 240px;
-  grid-template-rows: 30px 30px 40px;
+  grid-template-rows: 20px 20px 25px;
 `;
 
 const Image = styled.div`
   grid-area: 1 / 1 / 4 / 2;
-  background-color: white;
-  justify-content: center
-  `;
+  margin-top: auto;
+  margin-bottom: auto;
+`;
 
 const Artist = styled.div`
   grid-area: 1 / 2 / 1 / 3;
-  background-color: white
-`; 
+`;
 
 const Title = styled.div`
   grid-area: 2 / 2 / 2 / 3;
-  background-color: white
-`; 
-
+`;
 
 const Icons = styled.div`
   grid-area: 3 / 2 / 3 / 3;
   background-color: white
-`;  
+`;
 
 const SuggestedTrackListEntry = (props) => {
   return (
     <div>
       <SuggestedTrackEntryBox>
         <Grid>
-          <Image> 
-            <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="50px" width="50px"/> 
+          <Image>
+            <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="" width="50px" /> 
           </Image>
           <Artist>
             <Text>
@@ -90,29 +83,6 @@ const SuggestedTrackListEntry = (props) => {
           </Icons>
         </Grid>
       </SuggestedTrackEntryBox>
-      {/*<SuggestedTrackEntryBox>
-        <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="50px" width="50px"/>
-        <Text>
-          Title
-        </Text>
-        <Text>
-          Artist
-        </Text>
-        <Flexbox element="span" justifyContent="space-between" width="300px">
-          <BottomIcons>
-            <Text><i className="fas fa-play"></i> &nbsp; Plays</Text>
-          </BottomIcons>
-          <BottomIcons>
-            <Text><i className="far fa-heart"></i> &nbsp; Likes</Text>
-          </BottomIcons>
-          <BottomIcons>
-            <Text><i className="fas fa-retweet"></i> &nbsp; Shares</Text>
-          </BottomIcons>
-          <BottomIcons>
-            <Text><i className="fas fa-comment-alt"></i> &nbsp; Comments</Text>
-          </BottomIcons>
-        </Flexbox>
-      </SuggestedTrackEntryBox>*/}
     </div>
   );
 };
