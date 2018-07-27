@@ -15,6 +15,7 @@ const TitleText = styled.div`
 `;
 
 const SuggestedTrackList = (props) => {
+  const suggestedTracks = props.suggestedTracks;
   return (
     <SuggestedTrackBox>
       <TitleText>
@@ -24,9 +25,8 @@ const SuggestedTrackList = (props) => {
         Related Tracks
       </TitleText>
       <div>
-        <SuggestedTrackListEntry />
-        <SuggestedTrackListEntry />
-        <SuggestedTrackListEntry />
+        {suggestedTracks.map((track) => <SuggestedTrackListEntry track = {track}/>)}
+
       </div>
     </SuggestedTrackBox>
   );
