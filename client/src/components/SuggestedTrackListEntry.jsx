@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Flexbox from 'flexbox-react';
+
 const SuggestedTrackEntryBox = styled.div`
   border: 3px solid green;
   display: inline-block;
@@ -13,22 +14,24 @@ const BottomIcons = styled.button`
 
 const Text = styled.p`
   font-size: 12px;
-  font-family: Montserrat
+  font-family: Arial;
   color: pink;
-  display: inline-block;
+  padding-top: -10px;
+  padding-bottom; -10px;
+  align: top;
+  justify: top;
 `;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  background-color: green;
-  grid-gap: 5px;
+  grid-template-columns: 60px 240px;
+  grid-template-rows: 30px 30px 40px;
 `;
 
 const Image = styled.div`
   grid-area: 1 / 1 / 4 / 2;
-  background-color: white
+  background-color: white;
+  justify-content: center
   `;
 
 const Artist = styled.div`
@@ -50,29 +53,45 @@ const Icons = styled.div`
 const SuggestedTrackListEntry = (props) => {
   return (
     <div>
-      <Grid>
-        <Image> <img src="http://www.rw-designer.com/res/vsti.png" display="inline-block" alt="" /> </Image>
-        <Artist>Artist</Artist>
-        <Title>Title </Title>
-        <Icons> 
-          <Flexbox element="span" justifyContent="space-between" width="300px">
-          <BottomIcons>
-            <Text><i className="fas fa-play"></i> &nbsp; Plays</Text>
-          </BottomIcons>
-          <BottomIcons>
-            <Text><i className="far fa-heart"></i> &nbsp; Likes</Text>
-          </BottomIcons>
-          <BottomIcons>
-            <Text><i className="fas fa-retweet"></i> &nbsp; Shares</Text>
-          </BottomIcons>
-          <BottomIcons>
-            <Text><i className="fas fa-comment-alt"></i> &nbsp; Comments</Text>
-          </BottomIcons>
-        </Flexbox>
-        </Icons>
-      </Grid>
       <SuggestedTrackEntryBox>
-        <img src="http://www.rw-designer.com/res/vsti.png" display="inline-block" alt="" />
+        <Grid>
+          <Image> 
+            <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="50px" width="50px"/> 
+          </Image>
+          <Artist>
+            <Text>
+              Artist
+            </Text>
+          </Artist>
+          <Title>
+            <Text>
+              Title
+            </Text>
+          </Title>
+          <Icons>
+            <Flexbox element="span" justifyContent="space-between" width="240px">
+              <BottomIcons>
+                <i className="fas fa-play" />
+                &nbsp; 10m
+              </BottomIcons>
+              <BottomIcons>
+                <i className="far fa-heart" />
+                &nbsp; 569k
+              </BottomIcons>
+              <BottomIcons>
+                <i className="fas fa-retweet" />
+                &nbsp; 24.7k
+              </BottomIcons>
+              <BottomIcons>
+                <i className="fas fa-comment-alt" />
+                &nbsp; 3968
+              </BottomIcons>
+            </Flexbox>
+          </Icons>
+        </Grid>
+      </SuggestedTrackEntryBox>
+      {/*<SuggestedTrackEntryBox>
+        <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="50px" width="50px"/>
         <Text>
           Title
         </Text>
@@ -93,7 +112,7 @@ const SuggestedTrackListEntry = (props) => {
             <Text><i className="fas fa-comment-alt"></i> &nbsp; Comments</Text>
           </BottomIcons>
         </Flexbox>
-      </SuggestedTrackEntryBox>
+      </SuggestedTrackEntryBox>*/}
     </div>
   );
 };
