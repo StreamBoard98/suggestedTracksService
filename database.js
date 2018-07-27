@@ -65,5 +65,11 @@ const incrementMetric = (songId, metric, afterIncrementation) => {
   });
 };
 
-exports.retrieveSuggestedTracks = retrieveSuggestedTracks;
-exports.incrementMetric = incrementMetric;
+
+// exports.retrieveSuggestedTracks = retrieveSuggestedTracks;
+// exports.incrementMetric = incrementMetric;
+
+module.exports = {
+  retrieveSuggestedTracks,
+  incrementMetric,
+};
