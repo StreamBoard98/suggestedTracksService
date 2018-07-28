@@ -27,10 +27,27 @@ const Grid = styled.div`
   grid-template-rows: 20px 20px 25px;
 `;
 
+const PlayButtonOverlay = styled.div`
+  position: absolute;
+  color: rgb(255, 85, 0);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  padding-top: 10px;
+  padding-left: 10px;
+   ${ SuggestedTrackEntryBox }:hover & {
+    display: inline-block;
+  }
+`;
+
 const Image = styled.div`
   grid-area: 1 / 1 / 4 / 2;
   margin-top: auto;
   margin-bottom: auto;
+  position: relative;
+  width: 100%;
 `;
 
 const Artist = styled.div`
@@ -65,7 +82,10 @@ const SuggestedTrackListEntry = (props) => {
       <SuggestedTrackEntryBox>
         <Grid>
           <Image>
-            <img src={albumArt} display="inline-block" alt="" height="" width="50px" />
+            <img src={albumArt} display="inline-block" alt="" height="50px" width="50px" />
+            <PlayButtonOverlay>
+              <i className="fas fa-play-circle fa-2x"></i>
+            </PlayButtonOverlay>
           </Image>
           <Artist>
             <Text>
