@@ -37,7 +37,7 @@ const PlayButtonOverlay = styled.div`
   display: none;
   padding-top: 10px;
   padding-left: 10px;
-   ${ SuggestedTrackEntryBox }:hover & {
+   ${SuggestedTrackEntryBox}:hover & {
     display: inline-block;
   }
 `;
@@ -70,8 +70,8 @@ const Test = styled.div`
 
 const HoverButtons = styled.button`
   border: 1px solid lightgray;
-  color: silver;
-  background: transparent
+  color: black;
+  background: transparent;
 `;
 
 
@@ -106,11 +106,15 @@ const SuggestedTrackListEntry = (props) => {
           </Artist>
           <Title>
             <Text>
-              { title }
+             {/*} { title }*/}
             </Text>
             <Test>
-            <HoverButtons><i className="far fa-heart" /></HoverButtons>
-            <HoverButtons><i className="fas fa-ellipsis-h" /></HoverButtons>
+              <HoverButtons>
+                <i className="far fa-heart" />
+              </HoverButtons>
+              <HoverButtons>
+                <i className="fas fa-ellipsis-h" />
+              </HoverButtons>
             </Test>
           </Title>
           <Icons>
