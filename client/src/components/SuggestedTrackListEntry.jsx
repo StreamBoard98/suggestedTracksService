@@ -78,7 +78,9 @@ const HoverButtons = styled.button`
 const SuggestedTrackListEntry = (props) => {
   const {
     convertToReadable,
+    incrementLikeOrShare,
     track: {
+      id,
       artist,
       title,
       plays,
@@ -109,7 +111,7 @@ const SuggestedTrackListEntry = (props) => {
              {/*} { title }*/}
             </Text>
             <Test>
-              <HoverButtons>
+              <HoverButtons onClick={ () => {incrementLikeOrShare(id, 'likes')}}>
                 <i className="far fa-heart" />
               </HoverButtons>
               <HoverButtons>

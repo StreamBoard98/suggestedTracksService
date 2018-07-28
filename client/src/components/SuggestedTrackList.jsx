@@ -25,7 +25,7 @@ const SuggestedTrackList = (props) => {
         Related Tracks
       </TitleText>
       <div>
-        {suggestedTracks.map((track) => <SuggestedTrackListEntry track = {track} convertToReadable = { props.convertToReadable }/>)}
+        {suggestedTracks.map((track) => <SuggestedTrackListEntry track = {track} convertToReadable = { props.convertToReadable } incrementLikeOrShare = { props.incrementLikeOrShare } />)}
 
       </div>
     </SuggestedTrackBox>
