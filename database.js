@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const data = require('./randomDataValGen.js');
+const albumArt = require('./albumArt.js');
 
 mongoose.connect('mongodb://localhost/suggestedTracks');
 
@@ -17,6 +18,7 @@ const trackSchema = mongoose.Schema({
   likes: Number,
   shares: Number,
   comments: Number,
+  albumArt: String
 });
 
 const Track = mongoose.model('Track', trackSchema);
@@ -39,6 +41,20 @@ const Track = mongoose.model('Track', trackSchema);
 //     console.log('here are the tracks', tracks);
 //   }
 // });
+for (let artist in albumArt.albumArtList) {
+  //console.log(albumArt.albumArtList[artist]);
+  let getter = {};
+  let setter = {};
+  getter.artist = artist;
+  console.log(getter);
+  setter.albumArt = albumArt.albumArtList[artist];
+  Track.updateMany(getter, { $set: setter }, () => {
+    Track.find({}, (error, result) => {
+      console.log(JSON.stringify(result, null, 2));
+    });
+  }
+  );
+}
 
 const retrieveSuggestedTracks = (songId, afterRetrieve) => {
   Track.find({ id: songId }, (error, result) => {
@@ -64,10 +80,6 @@ const incrementMetric = (songId, metric, afterIncrementation) => {
     });
   });
 };
-
-
-// exports.retrieveSuggestedTracks = retrieveSuggestedTracks;
-// exports.incrementMetric = incrementMetric;
 
 module.exports = {
   retrieveSuggestedTracks,

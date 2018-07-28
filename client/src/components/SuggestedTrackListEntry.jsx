@@ -56,6 +56,7 @@ const SuggestedTrackListEntry = (props) => {
       likes,
       shares,
       comments,
+      albumArt,
     },
   } = props;
 
@@ -64,7 +65,7 @@ const SuggestedTrackListEntry = (props) => {
       <SuggestedTrackEntryBox>
         <Grid>
           <Image>
-            <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/A_Fever_You_Can%27t_Sweat_Out.jpg" display="inline-block" alt="" height="" width="50px" />
+            <img src={albumArt} display="inline-block" alt="" height="" width="50px" />
           </Image>
           <Artist>
             <Text>

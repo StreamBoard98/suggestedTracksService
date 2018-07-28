@@ -1,0 +1,25 @@
+const albumArtList = {
+  'BB King': 'https://s3-us-west-1.amazonaws.com/streamboardimages/BBKing_SinginTheBlues.jpg',
+  'Backstreet Boys': 'https://s3-us-west-1.amazonaws.com/streamboardimages/BackstreetBoys_BackstreetBoys.jpg',
+  'Beatles': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Beatles_AbbeyRoad.jpg',
+  'Beyonce': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Beyonce_IAm...SashaFierce.png',
+  'Birdy': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Birdy_Birdy.png',
+  'Daughter': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Daughter_TheWildYouth.jpg',
+  'Dead Kennedys': 'https://s3-us-west-1.amazonaws.com/streamboardimages/DeadKennedys_GiveMeConvenienceorGiveMeDeath.jpg',
+  'Ed Sheeran': 'https://s3-us-west-1.amazonaws.com/streamboardimages/EdSheeran_X.png',
+  'Ella Vos': 'https://s3-us-west-1.amazonaws.com/streamboardimages/EllaVos_WordsINeverSaid.jpg',
+  'Elvis': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Elvis_Elvis.jpg',
+  'Jasmine Thompson': 'https://s3-us-west-1.amazonaws.com/streamboardimages/JasmineThompson_AnotherBundleOfTantrums.jpg',
+  'Lindsey Stirling': 'https://s3-us-west-1.amazonaws.com/streamboardimages/LindseyStirling_LindseyStirling.jpg',
+  'Marian Hill': 'https://s3-us-west-1.amazonaws.com/streamboardimages/MarianHill_Sway.jpg',
+  'Michael Jackson': 'https://s3-us-west-1.amazonaws.com/streamboardimages/MichaelJackson_Thriller.png',
+  'Oh Wonder': 'https://s3-us-west-1.amazonaws.com/streamboardimages/OhWonder_OhWonder.png',
+  'Panic at the Disco': 'https://s3-us-west-1.amazonaws.com/streamboardimages/PanicAtTheDisco_AFeverYouCantSweatOut.jpg',
+  'Phoenix': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Phoenix_WolfgangAmadeusPhoenix.png',
+  'Rick Astley': 'https://s3-us-west-1.amazonaws.com/streamboardimages/RickAstley_WheneverYouNeedSomebody.png',
+  'Sam Smith': 'https://s3-us-west-1.amazonaws.com/streamboardimages/SamSmith_InTheLonelyHour.png',
+  'Sia': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Sia_ColourTheSmallOne.jpg',
+  'The Chainsmokers': 'https://s3-us-west-1.amazonaws.com/streamboardimages/TheChainsmokers_Memories...DoNotOpen.jpg',
+}
+
+exports.albumArtList = albumArtList;
