@@ -35,7 +35,6 @@ class App extends React.Component {
   incrementLikeOrShare(id, category) {
     let context = this;
     let url = `/suggestedTracks/${id}/${category}`;
-    console.log(url)
     $.ajax(url, {
       method: 'PUT',
       error: (error) => {

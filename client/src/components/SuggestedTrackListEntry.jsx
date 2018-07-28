@@ -66,14 +66,24 @@ const Icons = styled.div`
 const Test = styled.div`
   grid-area: 2 / 2 / 3 / 3;
   align-items: right;
+  background-color: 2px solid purple;
 `;
 
-const HoverButtons = styled.button`
+const HoverButton = styled.button`
   border: 1px solid lightgray;
   color: black;
-  background: transparent;
+  background: white;
 `;
 
+const LikeButton = HoverButton.extend`
+  position: absolute;
+  left: 240px;
+`;
+
+const MoreButton = HoverButton.extend`
+  position: absolute;
+  left: 270px;
+`;
 
 const SuggestedTrackListEntry = (props) => {
   const {
@@ -108,17 +118,17 @@ const SuggestedTrackListEntry = (props) => {
           </Artist>
           <Title>
             <Text>
-             {/*} { title }*/}
+              { title }
             </Text>
-            <Test>
-              <HoverButtons onClick={ () => {incrementLikeOrShare(id, 'likes')}}>
-                <i className="far fa-heart" />
-              </HoverButtons>
-              <HoverButtons>
-                <i className="fas fa-ellipsis-h" />
-              </HoverButtons>
-            </Test>
           </Title>
+            <Test>
+              <LikeButton onClick={ () => {incrementLikeOrShare(id, 'likes')}}>
+                <i className="far fa-heart" />
+              </LikeButton>
+              <MoreButton>
+                <i className="fas fa-ellipsis-h" />
+              </MoreButton>
+            </Test>
           <Icons>
             <Flexbox element="span" justifyContent="space-between" width="240px">
               <BottomIcons>
