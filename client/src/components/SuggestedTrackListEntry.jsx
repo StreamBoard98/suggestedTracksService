@@ -66,22 +66,24 @@ const Icons = styled.div`
 const Test = styled.div`
   grid-area: 2 / 2 / 3 / 3;
   align-items: right;
-  background-color: 2px solid purple;
 `;
 
 const HoverButton = styled.button`
   border: 1px solid lightgray;
   color: black;
   background: white;
+  position: absolute;
+  display: none
+  ${SuggestedTrackEntryBox}:hover & {
+    display: inline-block;
+  }
 `;
 
 const LikeButton = HoverButton.extend`
-  position: absolute;
   left: 240px;
 `;
 
 const MoreButton = HoverButton.extend`
-  position: absolute;
   left: 270px;
 `;
 
