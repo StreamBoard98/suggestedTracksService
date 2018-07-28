@@ -63,6 +63,18 @@ const Icons = styled.div`
   background-color: white
 `;
 
+const Test = styled.div`
+  grid-area: 2 / 2 / 3 / 3;
+  align-items: right;
+`;
+
+const HoverButtons = styled.button`
+  border: 1px solid lightgray;
+  color: silver;
+  background: transparent
+`;
+
+
 const SuggestedTrackListEntry = (props) => {
   const {
     convertToReadable,
@@ -96,6 +108,10 @@ const SuggestedTrackListEntry = (props) => {
             <Text>
               { title }
             </Text>
+            <Test>
+            <HoverButtons><i className="far fa-heart" /></HoverButtons>
+            <HoverButtons><i className="fas fa-ellipsis-h" /></HoverButtons>
+            </Test>
           </Title>
           <Icons>
             <Flexbox element="span" justifyContent="space-between" width="240px">
