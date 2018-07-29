@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+// import PropTypes from 'prop-types';
 import SuggestedTrackListEntry from './SuggestedTrackListEntry.jsx';
 
 const SuggestedTrackBox = styled.div`
@@ -30,8 +31,9 @@ const SuggestedTrackList = (props) => {
         Related Tracks
       </TitleText>
       <div>
-        {suggestedTracks.map((track) => <SuggestedTrackListEntry track={track} convertToReadable={convertToReadable} incrementLikeOrShare={incrementLikeOrShare} />)}
-
+        {suggestedTracks.map(
+          track => <SuggestedTrackListEntry track={track} convertToReadable={convertToReadable} incrementLikeOrShare={incrementLikeOrShare} />,
+        )}
       </div>
     </SuggestedTrackBox>
   );

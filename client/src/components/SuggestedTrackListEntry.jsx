@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Flexbox from 'flexbox-react';
+//import propTypes from 'prop-types';
 
 const SuggestedTrackEntryBox = styled.div`
   display: inline-block;
@@ -96,7 +97,7 @@ const DropDownOptions = styled.button`
   color: rgb(153, 153, 153);
   background: white;
   display: none;
-   ${SuggestedTrackEntryBox}:hover & {
+  ${SuggestedTrackEntryBox}:hover & {
     display: block;
   }
 
@@ -140,13 +141,13 @@ const SuggestedTrackListEntry = (props) => {
             </Text>
           </Title>
           <HoverButtonContainer>
-            <LikeButton onClick={ () => {incrementLikeOrShare(id, 'likes')}}>
+            <LikeButton onClick={() => {incrementLikeOrShare(id, 'likes')}}>
               <i className="far fa-heart" />
             </LikeButton>
             <Menu>
               <HoverButton> <i className="fas fa-ellipsis-h" /> </HoverButton>
               <DropDownOptions> <i class="fas fa-retweet"></i>Repost</DropDownOptions>
-              <DropDownOptions><i class="fas fa-share-square"></i> Share </DropDownOptions>
+              <DropDownOptions onClick={() => {incrementLikeOrShare(id, 'shares')}}> <i class="fas fa-share-square"></i> Share </DropDownOptions>
               <DropDownOptions> <i class="fas fa-list-ol"></i> Add to next up </DropDownOptions>
               <DropDownOptions> <i class="fas fa-headphones"></i> Add to playlist </DropDownOptions>
               <DropDownOptions><i class="fas fa-broadcast-tower"></i> Station </DropDownOptions>
@@ -181,5 +182,6 @@ const SuggestedTrackListEntry = (props) => {
     </div>
   );
 };
+
 
 export default SuggestedTrackListEntry;
