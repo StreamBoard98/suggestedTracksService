@@ -8,14 +8,19 @@ const SuggestedTrackBox = styled.div`
 `;
 
 const TitleText = styled.div`
-  font-family: Arial;
+  font-family: Open Sans;
   font-weight: normal;
-  color: silver;
+  color: rgb(153, 153, 153);
   border-bottom: 1px solid silver;
 `;
 
 const SuggestedTrackList = (props) => {
-  const suggestedTracks = props.suggestedTracks;
+  const {
+    suggestedTracks,
+    convertToReadable,
+    incrementLikeOrShare,
+  } = props;
+
   return (
     <SuggestedTrackBox>
       <TitleText>
@@ -25,7 +30,7 @@ const SuggestedTrackList = (props) => {
         Related Tracks
       </TitleText>
       <div>
-        {suggestedTracks.map((track) => <SuggestedTrackListEntry track = {track} convertToReadable = { props.convertToReadable } incrementLikeOrShare = { props.incrementLikeOrShare } />)}
+        {suggestedTracks.map((track) => <SuggestedTrackListEntry track={track} convertToReadable={convertToReadable} incrementLikeOrShare={incrementLikeOrShare} />)}
 
       </div>
     </SuggestedTrackBox>
