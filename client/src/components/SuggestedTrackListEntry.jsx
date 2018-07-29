@@ -11,6 +11,7 @@ const SuggestedTrackEntryBox = styled.div`
 const BottomIcons = styled.button`
   border: 1px solid white;
   color: rgb(153, 153, 153);
+  font-family: Open Sans;
   background: transparent
 `;
 
@@ -71,9 +72,11 @@ const HoverButtonContainer = styled.div`
 
 const HoverButton = styled.button`
   border: 1px solid lightgray;
+  font-size: 16px;
   color: black;
   background: white;
   display: none;
+
   ${SuggestedTrackEntryBox}:hover & {
     display: block;
   }
@@ -87,14 +90,15 @@ const LikeButton = HoverButton.extend`
 
 const Menu = styled.div`
   position: absolute;
-  left: 260px;
+  left: 280px;
 `;
 
 const DropDownOptions = styled.button`
   border: 1px solid lightgray;
+  font-family: Open Sans;
+  font-size: 16px;
   text-align: left;
   width: 120px;
-  color: rgb(153, 153, 153);
   background: white;
   display: none;
   ${SuggestedTrackEntryBox}:hover & {
