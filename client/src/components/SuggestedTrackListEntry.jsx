@@ -9,16 +9,16 @@ const SuggestedTrackEntryBox = styled.div`
 
 const BottomIcons = styled.button`
   border: 1px solid white;
-  color: silver;
+  color: rgb(153, 153, 153);
   background: transparent
 `;
 
 const Text = styled.p`
   font-size: 14px;
-  font-family: Arial;
+  font-family: Open Sans;
   font-weight: normal;
   margin: -1px;
-  color: silver;
+  color: rgb(153, 153, 153);
 `;
 
 const Grid = styled.div`
@@ -63,7 +63,7 @@ const Icons = styled.div`
   background-color: white
 `;
 
-const Test = styled.div`
+const HoverButtonContainer = styled.div`
   grid-area: 2 / 2 / 3 / 3;
   align-items: right;
 `;
@@ -83,9 +83,18 @@ const LikeButton = HoverButton.extend`
   left: 240px;
 `;
 
-const MoreButton = HoverButton.extend`
+const Menu = styled.ul`
+  list-style-type: none;
+  position: absolute;
   left: 270px;
 `;
+const DropDownOptions = styled.button`
+  border: 1px solid pink;
+  color: rgb(153, 153, 153);
+  background: transparent
+  display: inline-block;
+`;
+
 
 const SuggestedTrackListEntry = (props) => {
   const {
@@ -123,14 +132,19 @@ const SuggestedTrackListEntry = (props) => {
               { title }
             </Text>
           </Title>
-            <Test>
-              <LikeButton onClick={ () => {incrementLikeOrShare(id, 'likes')}}>
-                <i className="far fa-heart" />
-              </LikeButton>
-              <MoreButton>
-                <i className="fas fa-ellipsis-h" />
-              </MoreButton>
-            </Test>
+          <HoverButtonContainer>
+            <LikeButton onClick={ () => {incrementLikeOrShare(id, 'likes')}}>
+              <i className="far fa-heart" />
+            </LikeButton>
+            <Menu>
+              <li> <DropDownOptions> <i className="fas fa-ellipsis-h" /> </DropDownOptions></li>
+              <li> <DropDownOptions> <i class="fas fa-retweet"></i>Repost</DropDownOptions></li>
+              <li> <DropDownOptions><i class="fas fa-share-square"></i> Share </DropDownOptions></li>
+              <li> <DropDownOptions> <i class="fas fa-list-ol"></i> Add to next up </DropDownOptions></li>
+              <li> <DropDownOptions> <i class="fas fa-headphones"></i> Add to playlist </DropDownOptions></li>
+              <li> <DropDownOptions><i class="fas fa-broadcast-tower"></i> Station </DropDownOptions></li>
+            </Menu>
+          </HoverButtonContainer>
           <Icons>
             <Flexbox element="span" justifyContent="space-between" width="240px">
               <BottomIcons>
