@@ -72,27 +72,34 @@ const HoverButton = styled.button`
   border: 1px solid lightgray;
   color: black;
   background: white;
-  position: absolute;
-  display: none
+  display: none;
   ${SuggestedTrackEntryBox}:hover & {
-    display: inline-block;
+    display: block;
   }
 `;
 
 const LikeButton = HoverButton.extend`
+  position: absolute;
   left: 240px;
 `;
 
-const Menu = styled.ul`
-  list-style-type: none;
+
+const Menu = styled.div`
   position: absolute;
-  left: 270px;
+  left: 260px;
 `;
+
 const DropDownOptions = styled.button`
-  border: 1px solid pink;
+  border: 1px solid lightgray;
+  text-align: left;
+  width: 120px;
   color: rgb(153, 153, 153);
-  background: transparent
-  display: inline-block;
+  background: white;
+  display: none;
+   ${SuggestedTrackEntryBox}:hover & {
+    display: block;
+  }
+
 `;
 
 
@@ -137,12 +144,12 @@ const SuggestedTrackListEntry = (props) => {
               <i className="far fa-heart" />
             </LikeButton>
             <Menu>
-              <li> <DropDownOptions> <i className="fas fa-ellipsis-h" /> </DropDownOptions></li>
-              <li> <DropDownOptions> <i class="fas fa-retweet"></i>Repost</DropDownOptions></li>
-              <li> <DropDownOptions><i class="fas fa-share-square"></i> Share </DropDownOptions></li>
-              <li> <DropDownOptions> <i class="fas fa-list-ol"></i> Add to next up </DropDownOptions></li>
-              <li> <DropDownOptions> <i class="fas fa-headphones"></i> Add to playlist </DropDownOptions></li>
-              <li> <DropDownOptions><i class="fas fa-broadcast-tower"></i> Station </DropDownOptions></li>
+              <HoverButton> <i className="fas fa-ellipsis-h" /> </HoverButton>
+              <DropDownOptions> <i class="fas fa-retweet"></i>Repost</DropDownOptions>
+              <DropDownOptions><i class="fas fa-share-square"></i> Share </DropDownOptions>
+              <DropDownOptions> <i class="fas fa-list-ol"></i> Add to next up </DropDownOptions>
+              <DropDownOptions> <i class="fas fa-headphones"></i> Add to playlist </DropDownOptions>
+              <DropDownOptions><i class="fas fa-broadcast-tower"></i> Station </DropDownOptions>
             </Menu>
           </HoverButtonContainer>
           <Icons>
