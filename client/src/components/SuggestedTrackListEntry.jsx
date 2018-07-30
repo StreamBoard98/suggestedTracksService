@@ -98,13 +98,15 @@ const DropDownOptions = styled.button`
   font-family: Open Sans;
   font-size: 16px;
   text-align: left;
-  width: 120px;
+  width: 150px;
   background: white;
   display: none;
   ${SuggestedTrackEntryBox}:hover & {
     display: block;
   }
-
+  &:hover {
+    background-color: rgb(242, 242, 242);
+  }
 `;
 
 
