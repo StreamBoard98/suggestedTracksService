@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Flexbox from 'flexbox-react';
+//import propTypes from 'prop-types';
 
 const SuggestedTrackEntryBox = styled.div`
   display: inline-block;
@@ -9,16 +10,17 @@ const SuggestedTrackEntryBox = styled.div`
 
 const BottomIcons = styled.button`
   border: 1px solid white;
-  color: silver;
+  color: rgb(153, 153, 153);
+  font-family: Open Sans;
   background: transparent
 `;
 
 const Text = styled.p`
   font-size: 14px;
-  font-family: Arial;
+  font-family: Open Sans;
   font-weight: normal;
   margin: -1px;
-  color: silver;
+  color: rgb(153, 153, 153);
 `;
 
 const Grid = styled.div`
@@ -27,10 +29,27 @@ const Grid = styled.div`
   grid-template-rows: 20px 20px 25px;
 `;
 
+const PlayButtonOverlay = styled.div`
+  position: absolute;
+  color: rgb(255, 85, 0);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  padding-top: 10px;
+  padding-left: 10px;
+   ${SuggestedTrackEntryBox}:hover & {
+    display: inline-block;
+  }
+`;
+
 const Image = styled.div`
   grid-area: 1 / 1 / 4 / 2;
   margin-top: auto;
   margin-bottom: auto;
+  position: relative;
+  width: 100%;
 `;
 
 const Artist = styled.div`
@@ -46,10 +65,55 @@ const Icons = styled.div`
   background-color: white
 `;
 
+const HoverButtonContainer = styled.div`
+  grid-area: 2 / 2 / 3 / 3;
+  align-items: right;
+`;
+
+const HoverButton = styled.button`
+  border: 1px solid lightgray;
+  font-size: 16px;
+  color: black;
+  background: white;
+  display: none;
+
+  ${SuggestedTrackEntryBox}:hover & {
+    display: block;
+  }
+`;
+
+const LikeButton = HoverButton.extend`
+  position: absolute;
+  left: 240px;
+`;
+
+
+const Menu = styled.div`
+  position: absolute;
+  left: 280px;
+`;
+
+const DropDownOptions = styled.button`
+  border: 1px solid lightgray;
+  font-family: Open Sans;
+  font-size: 16px;
+  text-align: left;
+  width: 120px;
+  background: white;
+  display: none;
+  ${SuggestedTrackEntryBox}:hover & {
+    display: block;
+  }
+
+`;
+
+
 const SuggestedTrackListEntry = (props) => {
   const {
     convertToReadable,
+    incrementLikeOrShare,
     track: {
+      id,
       artist,
       title,
       plays,
@@ -65,7 +129,10 @@ const SuggestedTrackListEntry = (props) => {
       <SuggestedTrackEntryBox>
         <Grid>
           <Image>
-            <img src={albumArt} display="inline-block" alt="" height="" width="50px" />
+            <img src={albumArt} display="inline-block" alt="" height="50px" width="50px" />
+            <PlayButtonOverlay>
+              <i className="fas fa-play-circle fa-2x"></i>
+            </PlayButtonOverlay>
           </Image>
           <Artist>
             <Text>
@@ -77,6 +144,19 @@ const SuggestedTrackListEntry = (props) => {
               { title }
             </Text>
           </Title>
+          <HoverButtonContainer>
+            <LikeButton onClick={() => {incrementLikeOrShare(id, 'likes')}}>
+              <i className="far fa-heart" />
+            </LikeButton>
+            <Menu>
+              <HoverButton> <i className="fas fa-ellipsis-h" /> </HoverButton>
+              <DropDownOptions> <i class="fas fa-retweet"></i>Repost</DropDownOptions>
+              <DropDownOptions onClick={() => {incrementLikeOrShare(id, 'shares')}}> <i class="fas fa-share-square"></i> Share </DropDownOptions>
+              <DropDownOptions> <i class="fas fa-list-ol"></i> Add to next up </DropDownOptions>
+              <DropDownOptions> <i class="fas fa-headphones"></i> Add to playlist </DropDownOptions>
+              <DropDownOptions><i class="fas fa-broadcast-tower"></i> Station </DropDownOptions>
+            </Menu>
+          </HoverButtonContainer>
           <Icons>
             <Flexbox element="span" justifyContent="space-between" width="240px">
               <BottomIcons>
@@ -106,5 +186,6 @@ const SuggestedTrackListEntry = (props) => {
     </div>
   );
 };
+
 
 export default SuggestedTrackListEntry;

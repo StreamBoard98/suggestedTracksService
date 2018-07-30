@@ -32,15 +32,16 @@ class App extends React.Component {
     });
   }
 
-  incrementMetric() {
+  incrementLikeOrShare(id, category) {
     let context = this;
-    $.ajax('/suggestedTracks/:id/:category', {
+    let url = `/suggestedTracks/${id}/${category}`;
+    $.ajax(url, {
       method: 'PUT',
       error: (error) => {
         console.log('error with incrementing data');
       },
       success: (data) => {
-        console.log('successfully got');
+        console.log('successfully got', data);
       },
     });
   }
@@ -77,12 +78,14 @@ class App extends React.Component {
     }
     return result;
   }
-
+  
+  
 
   render() {
     return (
       <div>
-        <SuggestedTrackList suggestedTracks={ this.state.suggestedTracks } convertToReadable = { this.convertToReadable } />
+        <SuggestedTrackList suggestedTracks={ this.state.suggestedTracks } 
+        convertToReadable = { this.convertToReadable } incrementLikeOrShare = { this.incrementLikeOrShare = this.incrementLikeOrShare.bind(this) } />
       </div>
     );
   }

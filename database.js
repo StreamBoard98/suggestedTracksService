@@ -46,14 +46,8 @@ for (let artist in albumArt.albumArtList) {
   let getter = {};
   let setter = {};
   getter.artist = artist;
-  console.log(getter);
   setter.albumArt = albumArt.albumArtList[artist];
-  Track.updateMany(getter, { $set: setter }, () => {
-    Track.find({}, (error, result) => {
-      console.log(JSON.stringify(result, null, 2));
-    });
-  }
-  );
+  Track.updateMany(getter, { $set: setter });
 }
 
 const retrieveSuggestedTracks = (songId, afterRetrieve) => {
@@ -75,7 +69,6 @@ const incrementMetric = (songId, metric, afterIncrementation) => {
   fieldToIncrement[metric] = 1;
   Track.update({ id: songId }, { $inc: fieldToIncrement }, () => {
     Track.find({ id: songId }, (error, result) => {
-      // console.log('result is', result);
       afterIncrementation(error, result);
     });
   });
