@@ -98,18 +98,21 @@ const DropDownOptions = styled.button`
   font-family: Open Sans;
   font-size: 16px;
   text-align: left;
-  width: 120px;
+  width: 150px;
   background: white;
   display: none;
   ${SuggestedTrackEntryBox}:hover & {
     display: block;
   }
-
+  &:hover {
+    background-color: rgb(242, 242, 242);
+  }
 `;
 
 
 const SuggestedTrackListEntry = (props) => {
   const {
+    index,
     convertToReadable,
     incrementLikeOrShare,
     track: {
@@ -145,16 +148,33 @@ const SuggestedTrackListEntry = (props) => {
             </Text>
           </Title>
           <HoverButtonContainer>
-            <LikeButton onClick={() => {incrementLikeOrShare(id, 'likes')}}>
+            <LikeButton onClick={() => { incrementLikeOrShare(id, 'likes', index); }}>
               <i className="far fa-heart" />
             </LikeButton>
             <Menu>
-              <HoverButton> <i className="fas fa-ellipsis-h" /> </HoverButton>
-              <DropDownOptions> <i class="fas fa-retweet"></i>Repost</DropDownOptions>
-              <DropDownOptions onClick={() => {incrementLikeOrShare(id, 'shares')}}> <i class="fas fa-share-square"></i> Share </DropDownOptions>
-              <DropDownOptions> <i class="fas fa-list-ol"></i> Add to next up </DropDownOptions>
-              <DropDownOptions> <i class="fas fa-headphones"></i> Add to playlist </DropDownOptions>
-              <DropDownOptions><i class="fas fa-broadcast-tower"></i> Station </DropDownOptions>
+              <HoverButton>
+                <i className="fas fa-ellipsis-h" />
+              </HoverButton>
+              <DropDownOptions>
+                <i className="fas fa-retweet" />
+                Repost
+              </DropDownOptions>
+              <DropDownOptions onClick={() => { incrementLikeOrShare(id, 'shares') }}>
+                <i className="fas fa-share-square" />
+                Share
+              </DropDownOptions>
+              <DropDownOptions>
+                <i className="fas fa-list-ol" />
+                Add to next up
+              </DropDownOptions>
+              <DropDownOptions>
+                <i className="fas fa-headphones" />
+                Add to playlist
+              </DropDownOptions>
+              <DropDownOptions>
+                <i className="fas fa-broadcast-tower" />
+                Station
+              </DropDownOptions>
             </Menu>
           </HoverButtonContainer>
           <Icons>

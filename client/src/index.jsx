@@ -9,7 +9,6 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      currentTrack: '',
       suggestedTracks: [],
       songsOfSameGenre: [],
     };
@@ -32,7 +31,7 @@ class App extends React.Component {
     });
   }
 
-  incrementLikeOrShare(id, category) {
+  incrementLikeOrShare(id, category, index) {
     let context = this;
     let url = `/suggestedTracks/${id}/${category}`;
     $.ajax(url, {
@@ -41,7 +40,9 @@ class App extends React.Component {
         console.log('error with incrementing data');
       },
       success: (data) => {
-        console.log('successfully got', data);
+        const updatedTracks = context.state.suggestedTracks.slice();
+        updatedTracks.splice(index, 1, data[0]);
+        context.setState({ suggestedTracks: updatedTracks });
       },
     });
   }
