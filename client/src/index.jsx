@@ -9,7 +9,6 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      trackToRerender: '',
       suggestedTracks: [],
       songsOfSameGenre: [],
     };
@@ -36,15 +35,12 @@ class App extends React.Component {
     let context = this;
     let url = `/suggestedTracks/${id}/${category}`;
     $.ajax(url, {
-      method: 'POST',
-      data: JSON.stringify({hello: 'world'}),
+      method: 'PUT',
       error: (error) => {
         console.log('error with incrementing data');
       },
       success: (data) => {
-        console.log('data after incrementation', data)
-        console.log(context.state.suggestedTracks);
-        let updatedTracks = context.state.suggestedTracks.slice();
+        const updatedTracks = context.state.suggestedTracks.slice();
         updatedTracks.splice(index, 1, data[0]);
         context.setState({ suggestedTracks: updatedTracks });
       },

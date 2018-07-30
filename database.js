@@ -66,7 +66,7 @@ const retrieveSuggestedTracks = (songId, afterRetrieve) => {
 
 const incrementMetric = (songId, metric, afterIncrementation) => {
   let fieldToIncrement = {};
-  fieldToIncrement[metric] = 1000;
+  fieldToIncrement[metric] = 1;
   Track.update({ id: songId }, { $inc: fieldToIncrement }, () => {
     Track.find({ id: songId }, (error, result) => {
       afterIncrementation(error, result);
