@@ -112,6 +112,7 @@ const DropDownOptions = styled.button`
 
 const SuggestedTrackListEntry = (props) => {
   const {
+    index,
     convertToReadable,
     incrementLikeOrShare,
     track: {
@@ -125,7 +126,7 @@ const SuggestedTrackListEntry = (props) => {
       albumArt,
     },
   } = props;
-
+  console.log(index);
   return (
     <div>
       <SuggestedTrackEntryBox>
@@ -147,7 +148,7 @@ const SuggestedTrackListEntry = (props) => {
             </Text>
           </Title>
           <HoverButtonContainer>
-            <LikeButton onClick={() => {incrementLikeOrShare(id, 'likes')}}>
+            <LikeButton onClick={() => {incrementLikeOrShare(id, 'likes', index)}}>
               <i className="far fa-heart" />
             </LikeButton>
             <Menu>
