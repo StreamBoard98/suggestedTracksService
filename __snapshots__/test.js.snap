@@ -1,0 +1,1930 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SuggestedTrackList should render without throwing an error 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SuggestedTrackListEntry
+    convertToReadable={[Function]}
+    incrementLikeOrShare={[Function]}
+    index={1}
+    track={
+      Object {
+        "id": 1,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <styled.div>
+        <styled.div>
+          <styled.div>
+            <img
+              alt=""
+              display="inline-block"
+              height="50px"
+              width="50px"
+            />
+            <styled.div>
+              <i
+                className="fas fa-play-circle fa-2x"
+              />
+            </styled.div>
+          </styled.div>
+          <styled.div>
+            <styled.p />
+          </styled.div>
+          <styled.div>
+            <styled.p />
+          </styled.div>
+          <styled.div>
+            <styled.button
+              onClick={[Function]}
+            >
+              <i
+                className="far fa-heart"
+              />
+            </styled.button>
+            <styled.div>
+              <styled.button>
+                <i
+                  className="fas fa-ellipsis-h"
+                />
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-retweet"
+                />
+                Repost
+              </styled.button>
+              <styled.button
+                onClick={[Function]}
+              >
+                <i
+                  className="fas fa-share-square"
+                />
+                Share
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-list-ol"
+                />
+                Add to next up
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-headphones"
+                />
+                Add to playlist
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-broadcast-tower"
+                />
+                Station
+              </styled.button>
+            </styled.div>
+          </styled.div>
+          <styled.div>
+            <Styled(Component)
+              display="flex"
+              element="span"
+              justifyContent="space-between"
+              width="240px"
+            >
+              <styled.button>
+                <i
+                  className="fas fa-play"
+                />
+                 
+              </styled.button>
+              <styled.button>
+                <i
+                  className="far fa-heart"
+                />
+                 
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-retweet"
+                />
+                 
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-comment-alt"
+                />
+                 
+              </styled.button>
+            </Styled(Component)>
+          </styled.div>
+        </styled.div>
+      </styled.div>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <styled.div>
+          <styled.div>
+            <img
+              alt=""
+              display="inline-block"
+              height="50px"
+              width="50px"
+            />
+            <styled.div>
+              <i
+                className="fas fa-play-circle fa-2x"
+              />
+            </styled.div>
+          </styled.div>
+          <styled.div>
+            <styled.p />
+          </styled.div>
+          <styled.div>
+            <styled.p />
+          </styled.div>
+          <styled.div>
+            <styled.button
+              onClick={[Function]}
+            >
+              <i
+                className="far fa-heart"
+              />
+            </styled.button>
+            <styled.div>
+              <styled.button>
+                <i
+                  className="fas fa-ellipsis-h"
+                />
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-retweet"
+                />
+                Repost
+              </styled.button>
+              <styled.button
+                onClick={[Function]}
+              >
+                <i
+                  className="fas fa-share-square"
+                />
+                Share
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-list-ol"
+                />
+                Add to next up
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-headphones"
+                />
+                Add to playlist
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-broadcast-tower"
+                />
+                Station
+              </styled.button>
+            </styled.div>
+          </styled.div>
+          <styled.div>
+            <Styled(Component)
+              display="flex"
+              element="span"
+              justifyContent="space-between"
+              width="240px"
+            >
+              <styled.button>
+                <i
+                  className="fas fa-play"
+                />
+                 
+              </styled.button>
+              <styled.button>
+                <i
+                  className="far fa-heart"
+                />
+                 
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-retweet"
+                />
+                 
+              </styled.button>
+              <styled.button>
+                <i
+                  className="fas fa-comment-alt"
+                />
+                 
+              </styled.button>
+            </Styled(Component)>
+          </styled.div>
+        </styled.div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <styled.div>
+              <img
+                alt=""
+                display="inline-block"
+                height="50px"
+                width="50px"
+              />
+              <styled.div>
+                <i
+                  className="fas fa-play-circle fa-2x"
+                />
+              </styled.div>
+            </styled.div>,
+            <styled.div>
+              <styled.p />
+            </styled.div>,
+            <styled.div>
+              <styled.p />
+            </styled.div>,
+            <styled.div>
+              <styled.button
+                onClick={[Function]}
+              >
+                <i
+                  className="far fa-heart"
+                />
+              </styled.button>
+              <styled.div>
+                <styled.button>
+                  <i
+                    className="fas fa-ellipsis-h"
+                  />
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-retweet"
+                  />
+                  Repost
+                </styled.button>
+                <styled.button
+                  onClick={[Function]}
+                >
+                  <i
+                    className="fas fa-share-square"
+                  />
+                  Share
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-list-ol"
+                  />
+                  Add to next up
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-headphones"
+                  />
+                  Add to playlist
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-broadcast-tower"
+                  />
+                  Station
+                </styled.button>
+              </styled.div>
+            </styled.div>,
+            <styled.div>
+              <Styled(Component)
+                display="flex"
+                element="span"
+                justifyContent="space-between"
+                width="240px"
+              >
+                <styled.button>
+                  <i
+                    className="fas fa-play"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="far fa-heart"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-retweet"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-comment-alt"
+                  />
+                   
+                </styled.button>
+              </Styled(Component)>
+            </styled.div>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt=""
+                  display="inline-block"
+                  height="50px"
+                  width="50px"
+                />,
+                <styled.div>
+                  <i
+                    className="fas fa-play-circle fa-2x"
+                  />
+                </styled.div>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "",
+                  "display": "inline-block",
+                  "height": "50px",
+                  "src": undefined,
+                  "width": "50px",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <i
+                    className="fas fa-play-circle fa-2x"
+                  />,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fas fa-play-circle fa-2x",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <styled.p />,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <styled.p />,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <styled.button
+                  onClick={[Function]}
+                >
+                  <i
+                    className="far fa-heart"
+                  />
+                </styled.button>,
+                <styled.div>
+                  <styled.button>
+                    <i
+                      className="fas fa-ellipsis-h"
+                    />
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-retweet"
+                    />
+                    Repost
+                  </styled.button>
+                  <styled.button
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="fas fa-share-square"
+                    />
+                    Share
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-list-ol"
+                    />
+                    Add to next up
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-headphones"
+                    />
+                    Add to playlist
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-broadcast-tower"
+                    />
+                    Station
+                  </styled.button>
+                </styled.div>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <i
+                    className="far fa-heart"
+                  />,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "far fa-heart",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <styled.button>
+                      <i
+                        className="fas fa-ellipsis-h"
+                      />
+                    </styled.button>,
+                    <styled.button>
+                      <i
+                        className="fas fa-retweet"
+                      />
+                      Repost
+                    </styled.button>,
+                    <styled.button
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="fas fa-share-square"
+                      />
+                      Share
+                    </styled.button>,
+                    <styled.button>
+                      <i
+                        className="fas fa-list-ol"
+                      />
+                      Add to next up
+                    </styled.button>,
+                    <styled.button>
+                      <i
+                        className="fas fa-headphones"
+                      />
+                      Add to playlist
+                    </styled.button>,
+                    <styled.button>
+                      <i
+                        className="fas fa-broadcast-tower"
+                      />
+                      Station
+                    </styled.button>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <i
+                        className="fas fa-ellipsis-h"
+                      />,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "fas fa-ellipsis-h",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "i",
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <i
+                          className="fas fa-retweet"
+                        />,
+                        "Repost",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "fas fa-retweet",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      "Repost",
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <i
+                          className="fas fa-share-square"
+                        />,
+                        "Share",
+                      ],
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "fas fa-share-square",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      "Share",
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <i
+                          className="fas fa-list-ol"
+                        />,
+                        "Add to next up",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "fas fa-list-ol",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      "Add to next up",
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <i
+                          className="fas fa-headphones"
+                        />,
+                        "Add to playlist",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "fas fa-headphones",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      "Add to playlist",
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <i
+                          className="fas fa-broadcast-tower"
+                        />,
+                        "Station",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "fas fa-broadcast-tower",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      "Station",
+                    ],
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Styled(Component)
+                display="flex"
+                element="span"
+                justifyContent="space-between"
+                width="240px"
+              >
+                <styled.button>
+                  <i
+                    className="fas fa-play"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="far fa-heart"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-retweet"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-comment-alt"
+                  />
+                   
+                </styled.button>
+              </Styled(Component)>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <styled.button>
+                    <i
+                      className="fas fa-play"
+                    />
+                     
+                  </styled.button>,
+                  <styled.button>
+                    <i
+                      className="far fa-heart"
+                    />
+                     
+                  </styled.button>,
+                  <styled.button>
+                    <i
+                      className="fas fa-retweet"
+                    />
+                     
+                  </styled.button>,
+                  <styled.button>
+                    <i
+                      className="fas fa-comment-alt"
+                    />
+                     
+                  </styled.button>,
+                ],
+                "display": "flex",
+                "element": "span",
+                "justifyContent": "space-between",
+                "width": "240px",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="fas fa-play"
+                      />,
+                      " ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "fas fa-play",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "i",
+                    },
+                    " ",
+                    undefined,
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="far fa-heart"
+                      />,
+                      " ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "far fa-heart",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "i",
+                    },
+                    " ",
+                    undefined,
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="fas fa-retweet"
+                      />,
+                      " ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "fas fa-retweet",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "i",
+                    },
+                    " ",
+                    undefined,
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="fas fa-comment-alt"
+                      />,
+                      " ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "fas fa-comment-alt",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "i",
+                    },
+                    " ",
+                    undefined,
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <styled.div>
+          <styled.div>
+            <styled.div>
+              <img
+                alt=""
+                display="inline-block"
+                height="50px"
+                width="50px"
+              />
+              <styled.div>
+                <i
+                  className="fas fa-play-circle fa-2x"
+                />
+              </styled.div>
+            </styled.div>
+            <styled.div>
+              <styled.p />
+            </styled.div>
+            <styled.div>
+              <styled.p />
+            </styled.div>
+            <styled.div>
+              <styled.button
+                onClick={[Function]}
+              >
+                <i
+                  className="far fa-heart"
+                />
+              </styled.button>
+              <styled.div>
+                <styled.button>
+                  <i
+                    className="fas fa-ellipsis-h"
+                  />
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-retweet"
+                  />
+                  Repost
+                </styled.button>
+                <styled.button
+                  onClick={[Function]}
+                >
+                  <i
+                    className="fas fa-share-square"
+                  />
+                  Share
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-list-ol"
+                  />
+                  Add to next up
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-headphones"
+                  />
+                  Add to playlist
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-broadcast-tower"
+                  />
+                  Station
+                </styled.button>
+              </styled.div>
+            </styled.div>
+            <styled.div>
+              <Styled(Component)
+                display="flex"
+                element="span"
+                justifyContent="space-between"
+                width="240px"
+              >
+                <styled.button>
+                  <i
+                    className="fas fa-play"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="far fa-heart"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-retweet"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-comment-alt"
+                  />
+                   
+                </styled.button>
+              </Styled(Component)>
+            </styled.div>
+          </styled.div>
+        </styled.div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <styled.div>
+            <styled.div>
+              <img
+                alt=""
+                display="inline-block"
+                height="50px"
+                width="50px"
+              />
+              <styled.div>
+                <i
+                  className="fas fa-play-circle fa-2x"
+                />
+              </styled.div>
+            </styled.div>
+            <styled.div>
+              <styled.p />
+            </styled.div>
+            <styled.div>
+              <styled.p />
+            </styled.div>
+            <styled.div>
+              <styled.button
+                onClick={[Function]}
+              >
+                <i
+                  className="far fa-heart"
+                />
+              </styled.button>
+              <styled.div>
+                <styled.button>
+                  <i
+                    className="fas fa-ellipsis-h"
+                  />
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-retweet"
+                  />
+                  Repost
+                </styled.button>
+                <styled.button
+                  onClick={[Function]}
+                >
+                  <i
+                    className="fas fa-share-square"
+                  />
+                  Share
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-list-ol"
+                  />
+                  Add to next up
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-headphones"
+                  />
+                  Add to playlist
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-broadcast-tower"
+                  />
+                  Station
+                </styled.button>
+              </styled.div>
+            </styled.div>
+            <styled.div>
+              <Styled(Component)
+                display="flex"
+                element="span"
+                justifyContent="space-between"
+                width="240px"
+              >
+                <styled.button>
+                  <i
+                    className="fas fa-play"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="far fa-heart"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-retweet"
+                  />
+                   
+                </styled.button>
+                <styled.button>
+                  <i
+                    className="fas fa-comment-alt"
+                  />
+                   
+                </styled.button>
+              </Styled(Component)>
+            </styled.div>
+          </styled.div>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <styled.div>
+                <img
+                  alt=""
+                  display="inline-block"
+                  height="50px"
+                  width="50px"
+                />
+                <styled.div>
+                  <i
+                    className="fas fa-play-circle fa-2x"
+                  />
+                </styled.div>
+              </styled.div>,
+              <styled.div>
+                <styled.p />
+              </styled.div>,
+              <styled.div>
+                <styled.p />
+              </styled.div>,
+              <styled.div>
+                <styled.button
+                  onClick={[Function]}
+                >
+                  <i
+                    className="far fa-heart"
+                  />
+                </styled.button>
+                <styled.div>
+                  <styled.button>
+                    <i
+                      className="fas fa-ellipsis-h"
+                    />
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-retweet"
+                    />
+                    Repost
+                  </styled.button>
+                  <styled.button
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="fas fa-share-square"
+                    />
+                    Share
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-list-ol"
+                    />
+                    Add to next up
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-headphones"
+                    />
+                    Add to playlist
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-broadcast-tower"
+                    />
+                    Station
+                  </styled.button>
+                </styled.div>
+              </styled.div>,
+              <styled.div>
+                <Styled(Component)
+                  display="flex"
+                  element="span"
+                  justifyContent="space-between"
+                  width="240px"
+                >
+                  <styled.button>
+                    <i
+                      className="fas fa-play"
+                    />
+                     
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="far fa-heart"
+                    />
+                     
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-retweet"
+                    />
+                     
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-comment-alt"
+                    />
+                     
+                  </styled.button>
+                </Styled(Component)>
+              </styled.div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt=""
+                    display="inline-block"
+                    height="50px"
+                    width="50px"
+                  />,
+                  <styled.div>
+                    <i
+                      className="fas fa-play-circle fa-2x"
+                    />
+                  </styled.div>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "",
+                    "display": "inline-block",
+                    "height": "50px",
+                    "src": undefined,
+                    "width": "50px",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <i
+                      className="fas fa-play-circle fa-2x"
+                    />,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "fas fa-play-circle fa-2x",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "i",
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <styled.p />,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <styled.p />,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <styled.button
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="far fa-heart"
+                    />
+                  </styled.button>,
+                  <styled.div>
+                    <styled.button>
+                      <i
+                        className="fas fa-ellipsis-h"
+                      />
+                    </styled.button>
+                    <styled.button>
+                      <i
+                        className="fas fa-retweet"
+                      />
+                      Repost
+                    </styled.button>
+                    <styled.button
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="fas fa-share-square"
+                      />
+                      Share
+                    </styled.button>
+                    <styled.button>
+                      <i
+                        className="fas fa-list-ol"
+                      />
+                      Add to next up
+                    </styled.button>
+                    <styled.button>
+                      <i
+                        className="fas fa-headphones"
+                      />
+                      Add to playlist
+                    </styled.button>
+                    <styled.button>
+                      <i
+                        className="fas fa-broadcast-tower"
+                      />
+                      Station
+                    </styled.button>
+                  </styled.div>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <i
+                      className="far fa-heart"
+                    />,
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "far fa-heart",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "i",
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <styled.button>
+                        <i
+                          className="fas fa-ellipsis-h"
+                        />
+                      </styled.button>,
+                      <styled.button>
+                        <i
+                          className="fas fa-retweet"
+                        />
+                        Repost
+                      </styled.button>,
+                      <styled.button
+                        onClick={[Function]}
+                      >
+                        <i
+                          className="fas fa-share-square"
+                        />
+                        Share
+                      </styled.button>,
+                      <styled.button>
+                        <i
+                          className="fas fa-list-ol"
+                        />
+                        Add to next up
+                      </styled.button>,
+                      <styled.button>
+                        <i
+                          className="fas fa-headphones"
+                        />
+                        Add to playlist
+                      </styled.button>,
+                      <styled.button>
+                        <i
+                          className="fas fa-broadcast-tower"
+                        />
+                        Station
+                      </styled.button>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <i
+                          className="fas fa-ellipsis-h"
+                        />,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "fas fa-ellipsis-h",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <i
+                            className="fas fa-retweet"
+                          />,
+                          "Repost",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "fas fa-retweet",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "i",
+                        },
+                        "Repost",
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <i
+                            className="fas fa-share-square"
+                          />,
+                          "Share",
+                        ],
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "fas fa-share-square",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "i",
+                        },
+                        "Share",
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <i
+                            className="fas fa-list-ol"
+                          />,
+                          "Add to next up",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "fas fa-list-ol",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "i",
+                        },
+                        "Add to next up",
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <i
+                            className="fas fa-headphones"
+                          />,
+                          "Add to playlist",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "fas fa-headphones",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "i",
+                        },
+                        "Add to playlist",
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <i
+                            className="fas fa-broadcast-tower"
+                          />,
+                          "Station",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "fas fa-broadcast-tower",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "i",
+                        },
+                        "Station",
+                      ],
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Styled(Component)
+                  display="flex"
+                  element="span"
+                  justifyContent="space-between"
+                  width="240px"
+                >
+                  <styled.button>
+                    <i
+                      className="fas fa-play"
+                    />
+                     
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="far fa-heart"
+                    />
+                     
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-retweet"
+                    />
+                     
+                  </styled.button>
+                  <styled.button>
+                    <i
+                      className="fas fa-comment-alt"
+                    />
+                     
+                  </styled.button>
+                </Styled(Component)>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <styled.button>
+                      <i
+                        className="fas fa-play"
+                      />
+                       
+                    </styled.button>,
+                    <styled.button>
+                      <i
+                        className="far fa-heart"
+                      />
+                       
+                    </styled.button>,
+                    <styled.button>
+                      <i
+                        className="fas fa-retweet"
+                      />
+                       
+                    </styled.button>,
+                    <styled.button>
+                      <i
+                        className="fas fa-comment-alt"
+                      />
+                       
+                    </styled.button>,
+                  ],
+                  "display": "flex",
+                  "element": "span",
+                  "justifyContent": "space-between",
+                  "width": "240px",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <i
+                          className="fas fa-play"
+                        />,
+                        " ",
+                        undefined,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "fas fa-play",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      " ",
+                      undefined,
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <i
+                          className="far fa-heart"
+                        />,
+                        " ",
+                        undefined,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "far fa-heart",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      " ",
+                      undefined,
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <i
+                          className="fas fa-retweet"
+                        />,
+                        " ",
+                        undefined,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "fas fa-retweet",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      " ",
+                      undefined,
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <i
+                          className="fas fa-comment-alt"
+                        />,
+                        " ",
+                        undefined,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "fas fa-comment-alt",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "i",
+                      },
+                      " ",
+                      undefined,
+                    ],
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
