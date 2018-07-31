@@ -1,13 +1,12 @@
-# Project Name
+# StreamBoard
 
-> Project description
+> A front-end focused project where we design s product page modeled after a SoundCloud song page.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/StreamBoard98/musicPlayerService
+  - https://github.com/StreamBoard98/commentsListAndSubmissionService
+  - https://github.com/StreamBoard98/waveFormService
 
 ## Table of Contents
 
