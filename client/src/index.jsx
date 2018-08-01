@@ -11,14 +11,15 @@ class App extends React.Component {
     this.state = {
       suggestedTracks: [],
       songsOfSameGenre: [],
-      // urlEncodedId: window.location,
+      urlEncodedId: window.location.pathname.substring(7),
     };
   }
 
   componentDidMount() {
-    // console.log(this.state.urlEncodedId)
+    console.log(this.state.urlEncodedId);
     let context = this;
-    $.ajax('http://localhost:4001/songs/1', { //make this varaible using URL encoded (window gloval location)
+
+    $.ajax(`http://localhost:4001/songs/${context.state.urlEncodedId}`, { //make this varaible using URL encoded (window gloval location)
       method: 'GET',
       error: (error) => {
         console.log('error with getting data', error);
