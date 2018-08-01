@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Flexbox from 'flexbox-react';
-//import propTypes from 'prop-types';
 
 const SuggestedTrackEntryBox = styled.div`
   display: inline-block;
@@ -134,7 +133,7 @@ const SuggestedTrackListEntry = (props) => {
           <Image>
             <img src={albumArt} display="inline-block" alt="" height="50px" width="50px" />
             <PlayButtonOverlay>
-              <i className="fas fa-play-circle fa-2x"></i>
+              <i className="fas fa-play-circle fa-2x" />
             </PlayButtonOverlay>
           </Image>
           <Artist>

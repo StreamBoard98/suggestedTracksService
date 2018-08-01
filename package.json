@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "flexbox-react": "^4.4.0",
+    "http-proxy": "^1.17.0",
     "jest": "^23.4.2",
     "jquery": "^3.3.1",
     "mockgoose": "^7.3.5",
@@ -47,6 +49,11 @@
   "homepage": "https://github.com/StreamBoard98/suggestedTracksService#readme",
   "jest": {
     "verbose": true,
-    "testURL": "http://localhost/"
+    "testURL": "http://localhost/",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
   }
 }

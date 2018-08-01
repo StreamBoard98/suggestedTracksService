@@ -11,18 +11,20 @@ class App extends React.Component {
     this.state = {
       suggestedTracks: [],
       songsOfSameGenre: [],
+      urlEncodedId: window.location.pathname.substring(7),
     };
   }
 
   componentDidMount() {
+    console.log(this.state.urlEncodedId);
     let context = this;
-    $.ajax('/songs/1/suggestedTracks', {
+
+    $.ajax(`http://localhost:4001/songs/${context.state.urlEncodedId}`, { //make this varaible using URL encoded (window gloval location)
       method: 'GET',
       error: (error) => {
-        console.log('error with getting data');
+        console.log('error with getting data', error);
       },
       success: (data) => {
-        console.log('successfully got data');
         context.setState({ currentTrack: data[0] });
         context.setState({ songsOfSameGenre: data }, () => {
           this.displayThreeSuggestions();
@@ -33,7 +35,7 @@ class App extends React.Component {
 
   incrementLikeOrShare(id, category, index) {
     let context = this;
-    let url = `/suggestedTracks/${id}/${category}`;
+    let url = `http://localhost:4001/suggestedTracks/${id}/${category}`;
     $.ajax(url, {
       method: 'PUT',
       error: (error) => {
@@ -93,4 +95,4 @@ class App extends React.Component {
 }
 
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('suggestedTracks'));
