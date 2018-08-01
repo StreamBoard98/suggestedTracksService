@@ -16,7 +16,7 @@ class App extends React.Component {
 
   componentDidMount() {
     let context = this;
-    $.ajax('/songs/1/suggestedTracks', {
+    $.ajax('/songs/1', {
       method: 'GET',
       error: (error) => {
         console.log('error with getting data');
