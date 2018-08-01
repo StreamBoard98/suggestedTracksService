@@ -32,7 +32,7 @@ const SuggestedTrackList = (props) => {
       </TitleText>
       <div>
         {suggestedTracks.map(
-          (track, index) => <SuggestedTrackListEntry index={index} track={track} convertToReadable={convertToReadable} incrementLikeOrShare={incrementLikeOrShare} />,
+          (track, index) => <SuggestedTrackListEntry key={index} index={index} track={track} convertToReadable={convertToReadable} incrementLikeOrShare={incrementLikeOrShare} />,
         )}
       </div>
     </SuggestedTrackBox>
