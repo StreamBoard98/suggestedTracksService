@@ -41,13 +41,18 @@ const Track = mongoose.model('Track', trackSchema);
 //     console.log('here are the tracks', tracks);
 //   }
 // });
+
 for (let artist in albumArt.albumArtList) {
   //console.log(albumArt.albumArtList[artist]);
   let getter = {};
   let setter = {};
   getter.artist = artist;
   setter.albumArt = albumArt.albumArtList[artist];
-  Track.updateMany(getter, { $set: setter });
+  Track.updateMany(getter, { $set: setter }, () => {
+    Track.find({}, (error, result) => {
+      console.log(JSON.stringify(result, null, 2));
+    })
+  });
 }
 
 const retrieveSuggestedTracks = (songId, afterRetrieve) => {
