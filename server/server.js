@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '../client/src')));
 app.use(cors());
 console.log(path.join(__dirname, '../client/dist'));
 
-app.get('/songs/:id', (req, res) => {
+app.get('/songs/:id', (req, res) => { 
   let selectedTrackId = req.params.id;
   mongodatabase.retrieveSuggestedTracks(selectedTrackId, (error, dataRows) => {
     if (error) {
@@ -23,7 +23,7 @@ app.get('/songs/:id', (req, res) => {
   });
 });
 
-app.put('/suggestedTracks/:id/:category', (req, res) => {
+app.put('/suggestedTracks/:id/:category', (req, res) => { 
   const selectedTrackId = req.params.id;
   const selectedTrackMetric = req.params.category;
   mongodatabase.incrementMetric(selectedTrackId, selectedTrackMetric, (error, result) => {
