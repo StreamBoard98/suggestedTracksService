@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import styledComponents from 'styled-components';
 import $ from 'jquery';
 import SuggestedTrackList from './components/SuggestedTrackList.jsx';
+import SuggestedTrackListEntry from './components/SuggestedTrackListEntry.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -94,5 +95,6 @@ class App extends React.Component {
   }
 }
 
+export default App;
 
 ReactDOM.render(<App />, document.getElementById('suggestedTracks'));
