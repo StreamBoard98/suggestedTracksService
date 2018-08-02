@@ -14,18 +14,18 @@
 
 .suggestedTrackEntryBox:hover .likeButton {
   display: inline-block;
-  z-index:2;
+  z-index: 2;
 }
 
 .suggestedTrackEntryBox:hover .dropDownOptions {
   display: block;
-  z-index:2;
+  z-index: 2;
 }
 
 .bottomIcons {
   border: 1px solid white;
   color: rgb(153, 153, 153);
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   background: transparent
 }
 
@@ -108,7 +108,7 @@
 
 .dropDownOptions {
   border: 1px solid lightgray;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 16px;
   text-align: left;
   width: 150px;

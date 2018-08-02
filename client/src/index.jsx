@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styledComponents from 'styled-components';
 import $ from 'jquery';
 import SuggestedTrackList from './components/SuggestedTrackList.jsx';
 import SuggestedTrackListEntry from './components/SuggestedTrackListEntry.jsx';
