@@ -130,7 +130,7 @@ const SuggestedTrackListEntry = (props) => {
       albumArt,
     },
   } = props;
-  console.log(index);
+
   return (
     <div>
       <SuggestedTrackEntryBox>

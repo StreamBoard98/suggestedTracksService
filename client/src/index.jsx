@@ -17,9 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.state.urlEncodedId);
     let context = this;
-
     $.ajax(`http://localhost:4001/songs/${context.state.urlEncodedId}`, { //make this varaible using URL encoded (window gloval location)
       method: 'GET',
       error: (error) => {
@@ -35,7 +33,6 @@ class App extends React.Component {
   }
 
   incrementLikeOrShare(id, category, index) {
-    console.log(index);
     let context = this;
     let url = `http://localhost:4001/suggestedTracks/${id}/${category}`;
     $.ajax(url, {
