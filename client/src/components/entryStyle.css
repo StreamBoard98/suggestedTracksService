@@ -7,6 +7,21 @@
   display: inline-block;
 }
 
+.suggestedTrackEntryBox:hover .hoverButton {
+  display: inline-block;
+  z-index:2;
+}
+
+.suggestedTrackEntryBox:hover .likeButton {
+  display: inline-block;
+  z-index:2;
+}
+
+.suggestedTrackEntryBox:hover .dropDownOptions {
+  display: block;
+  z-index:2;
+}
+
 .bottomIcons {
   border: 1px solid white;
   color: rgb(153, 153, 153);
@@ -82,9 +97,13 @@
 
 
 .likeButton {
+  border: 1px solid lightgray;
+  font-size: 16px;
+  color: black;
+  background: white;
+  display: none;
   margin-left: 0px;
   margin-top:0px;
-  display: none;
 }
 
 .dropDownOptions {
@@ -97,3 +116,6 @@
   display: none;
 }
 
+.dropDownOptions:hover {
+  background-color: rgb(242, 242, 242);
+}
