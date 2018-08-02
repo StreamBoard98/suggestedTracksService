@@ -53,7 +53,6 @@ class App extends React.Component {
     let randomTracks = [];
     while (randomTracks.length !== 3) {
       let randomIndex = Math.floor(Math.random() * (arrayOfTracks.length - 1) + 1);
-      console.log(arrayOfTracks[randomIndex]);
       if (arrayOfTracks[randomIndex].id !== Number(currentSongId)) {
         randomTracks.push(arrayOfTracks[randomIndex]);
         arrayOfTracks.splice(randomIndex, 1);

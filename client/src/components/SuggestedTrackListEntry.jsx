@@ -70,7 +70,7 @@ const SuggestedTrackListEntry = (props) => {
             </div>
           </div>
           <div className={styles.icons}>
-            <Flexbox element="span" justifyContent="space-between" width="240px">
+            <span className={styles.flexSpan}>
               <button type="button" className= {styles.bottomIcons}>
                 <i className="fas fa-play" />
                 &nbsp;
@@ -91,7 +91,7 @@ const SuggestedTrackListEntry = (props) => {
                 &nbsp;
                 { convertToReadable(comments) }
               </button>
-            </Flexbox>
+            </span>
           </div>
         </div>
       </div>
