@@ -36,10 +36,6 @@
   padding-left: 10px;
 }
 
-//this goes with playbuttonoverlay
- ${SuggestedTrackEntryBox}:hover & {
-    display: inline-block;
-  }
 
 .image {
   grid-area: 1 / 1 / 4 / 2;
@@ -80,11 +76,7 @@
   display: none;
 }
 
-//FIX ME (PART OF HOVER BUTTON)
-  ${SuggestedTrackEntryBox}:hover & {
-    display: inline-block;
-  }
-`;
+
 
 .likeButton {
   margin-left: 0px;
@@ -102,11 +94,3 @@
   display: none;
 }
 
-THESE GO WITH DROPDOWN OPTIONS
-  ${SuggestedTrackEntryBox}:hover & {
-    display: block;
-  }
-  &:hover {
-    background-color: rgb(242, 242, 242);
-  }
-`;
