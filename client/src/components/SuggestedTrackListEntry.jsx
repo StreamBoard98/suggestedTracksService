@@ -24,7 +24,7 @@ const Text = styled.p`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 60px 240px;
+  grid-template-columns: 60px 240px 500px;
   grid-template-rows: 20px 20px 25px;
 `;
 
@@ -65,7 +65,11 @@ const Icons = styled.div`
 `;
 
 const HoverButtonContainer = styled.div`
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: 2 / 3 / 3 / 3;
+  display: flex;
+  flex-direction: row;
+  margin-left: -70px;
+  z-index: 2;
   align-items: right;
 `;
 
@@ -76,20 +80,21 @@ const HoverButton = styled.button`
   background: white;
   display: none;
 
+
   ${SuggestedTrackEntryBox}:hover & {
-    display: block;
+    display: inline-block;
   }
 `;
 
 const LikeButton = HoverButton.extend`
-  position: absolute;
-  left: 240px;
+  margin-left: 0px;
+  margin-top:0px;
+  display: none;
 `;
 
 
 const Menu = styled.div`
-  position: absolute;
-  left: 280px;
+ 
 `;
 
 const DropDownOptions = styled.button`
