@@ -53,6 +53,13 @@ for (let artist in albumArt.albumArtList) {
       console.log(JSON.stringify(result, null, 2));
     })
   });
+  Track.updateMany({artist: 'The Beatles'}, { $set: {albumArt: 'https://s3-us-west-1.amazonaws.com/streamboardimages/Beatles_AbbeyRoad.jpg' } }, () => {
+    Track.find({}, (error, result) => {
+      console.log(JSON.stringify(result, null, 2));
+    })
+  });
+
+  
 }
 
 const retrieveSuggestedTracks = (songId, afterRetrieve) => {
