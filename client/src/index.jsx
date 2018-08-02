@@ -35,6 +35,7 @@ class App extends React.Component {
   }
 
   incrementLikeOrShare(id, category, index) {
+    console.log(index);
     let context = this;
     let url = `http://localhost:4001/suggestedTracks/${id}/${category}`;
     $.ajax(url, {
@@ -44,6 +45,7 @@ class App extends React.Component {
       },
       success: (data) => {
         const updatedTracks = context.state.suggestedTracks.slice();
+        window.alert(index);
         updatedTracks.splice(index, 1, data[0]);
         context.setState({ suggestedTracks: updatedTracks });
       },

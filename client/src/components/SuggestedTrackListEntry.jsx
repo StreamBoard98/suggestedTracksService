@@ -130,7 +130,7 @@ const SuggestedTrackListEntry = (props) => {
       albumArt,
     },
   } = props;
-
+  console.log(index);
   return (
     <div>
       <SuggestedTrackEntryBox>
@@ -163,7 +163,7 @@ const SuggestedTrackListEntry = (props) => {
                 <i className="fas fa-retweet" />
                 Repost
               </DropDownOptions>
-              <DropDownOptions onClick={() => { incrementLikeOrShare(id, 'shares') }}>
+              <DropDownOptions onClick={() => { incrementLikeOrShare(id, 'shares', index); }}>
                 <i className="fas fa-share-square" />
                 Share
               </DropDownOptions>
