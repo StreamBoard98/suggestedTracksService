@@ -49,13 +49,15 @@ class App extends React.Component {
 
   displayThreeSuggestions() {
     let arrayOfTracks = this.state.songsOfSameGenre.slice();
+    let currentSongId = this.state.urlEncodedId.slice(0, this.state.urlEncodedId.length - 1);
     let randomTracks = [];
-    let x = 0;
-    while (x < 3) {
+    while (randomTracks.length !== 3) {
       let randomIndex = Math.floor(Math.random() * (arrayOfTracks.length - 1) + 1);
-      randomTracks.push(arrayOfTracks[randomIndex]);
-      arrayOfTracks.splice(randomIndex, 1);
-      x += 1;
+      console.log(arrayOfTracks[randomIndex]);
+      if (arrayOfTracks[randomIndex].id !== Number(currentSongId)) {
+        randomTracks.push(arrayOfTracks[randomIndex]);
+        arrayOfTracks.splice(randomIndex, 1);
+      }
     }
     this.setState({ suggestedTracks: randomTracks });
   }
