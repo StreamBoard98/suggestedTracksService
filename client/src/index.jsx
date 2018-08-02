@@ -42,7 +42,6 @@ class App extends React.Component {
       },
       success: (data) => {
         const updatedTracks = context.state.suggestedTracks.slice();
-        window.alert(index);
         updatedTracks.splice(index, 1, data[0]);
         context.setState({ suggestedTracks: updatedTracks });
       },

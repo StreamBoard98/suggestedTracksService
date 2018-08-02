@@ -1,0 +1,12 @@
+.suggestedTrackBox {
+  margin: 2px;
+  display: inline-block;
+}
+
+.titleText {
+  font-family: Open Sans;
+  width: 400px;
+  font-weight: normal;
+  color: rgb(153, 153, 153);
+  border-bottom: 1px solid silver;
+}

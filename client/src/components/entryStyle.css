@@ -3,6 +3,25 @@
   margin-bottom: 20px;
 }
 
+.suggestedTrackEntryBox:hover .playButtonOverlay {
+  display: inline-block;
+}
+
+.suggestedTrackEntryBox:hover .hoverButton {
+  display: inline-block;
+  z-index:2;
+}
+
+.suggestedTrackEntryBox:hover .likeButton {
+  display: inline-block;
+  z-index:2;
+}
+
+.suggestedTrackEntryBox:hover .dropDownOptions {
+  display: block;
+  z-index:2;
+}
+
 .bottomIcons {
   border: 1px solid white;
   color: rgb(153, 153, 153);
@@ -26,6 +45,7 @@
 
 .playButtonOverlay {
   position: absolute;
+  z-index: 2;
   color: rgb(255, 85, 0);
   top: 0;
   left: 0;
@@ -35,11 +55,6 @@
   padding-top: 10px;
   padding-left: 10px;
 }
-
-//this goes with playbuttonoverlay
- ${SuggestedTrackEntryBox}:hover & {
-    display: inline-block;
-  }
 
 .image {
   grid-area: 1 / 1 / 4 / 2;
@@ -80,16 +95,15 @@
   display: none;
 }
 
-//FIX ME (PART OF HOVER BUTTON)
-  ${SuggestedTrackEntryBox}:hover & {
-    display: inline-block;
-  }
-`;
 
 .likeButton {
+  border: 1px solid lightgray;
+  font-size: 16px;
+  color: black;
+  background: white;
+  display: none;
   margin-left: 0px;
   margin-top:0px;
-  display: none;
 }
 
 .dropDownOptions {
@@ -102,11 +116,6 @@
   display: none;
 }
 
-THESE GO WITH DROPDOWN OPTIONS
-  ${SuggestedTrackEntryBox}:hover & {
-    display: block;
-  }
-  &:hover {
-    background-color: rgb(242, 242, 242);
-  }
-`;
+.dropDownOptions:hover {
+  background-color: rgb(242, 242, 242);
+}
