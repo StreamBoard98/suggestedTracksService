@@ -3,6 +3,10 @@
   margin-bottom: 20px;
 }
 
+.suggestedTrackEntryBox:hover .playButtonOverlay {
+  display: inline-block;
+}
+
 .bottomIcons {
   border: 1px solid white;
   color: rgb(153, 153, 153);
@@ -26,6 +30,7 @@
 
 .playButtonOverlay {
   position: absolute;
+  z-index: 2;
   color: rgb(255, 85, 0);
   top: 0;
   left: 0;
@@ -35,7 +40,6 @@
   padding-top: 10px;
   padding-left: 10px;
 }
-
 
 .image {
   grid-area: 1 / 1 / 4 / 2;
@@ -75,7 +79,6 @@
   background: white;
   display: none;
 }
-
 
 
 .likeButton {
