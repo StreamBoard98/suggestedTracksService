@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     let context = this;
-    $.ajax(`http://localhost:4001/songs/${context.state.urlEncodedId}`, { //make this varaible using URL encoded (window gloval location)
+    $.ajax(`http://ec2-34-204-67-19.compute-1.amazonaws.com/songs/${context.state.urlEncodedId}`, { //make this varaible using URL encoded (window gloval location)
       method: 'GET',
       error: (error) => {
         console.log('error with getting data', error);
@@ -33,7 +33,7 @@ class App extends React.Component {
 
   incrementLikeOrShare(id, category, index) {
     let context = this;
-    let url = `http://localhost:4001/suggestedTracks/${id}/${category}`;
+    let url = `http://ec2-34-204-67-19.compute-1.amazonaws.com/suggestedTracks/${id}/${category}`;
     $.ajax(url, {
       method: 'PUT',
       error: (error) => {

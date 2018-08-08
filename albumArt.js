@@ -1,7 +1,7 @@
 const albumArtList = {
   'BB King': 'https://s3-us-west-1.amazonaws.com/streamboardimages/BBKing_SinginTheBlues.jpg',
   'Backstreet Boys': 'https://s3-us-west-1.amazonaws.com/streamboardimages/BackstreetBoys_BackstreetBoys.jpg',
-  'Beatles': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Beatles_AbbeyRoad.jpg',
+  'The Beatles': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Beatles_AbbeyRoad.jpg',
   'Beyonce': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Beyonce_IAm...SashaFierce.png',
   'Birdy': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Birdy_Birdy.png',
   'Daughter': 'https://s3-us-west-1.amazonaws.com/streamboardimages/Daughter_TheWildYouth.jpg',

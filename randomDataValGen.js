@@ -1,6 +1,7 @@
 // import sampleData from 'groupSharedData.js';
 const _ = require('lodash');
 const importedSampleData = require('./groupSharedData.js');
+const albumArt = require('./albumArt.js');
 
 function generateDataPoint() {
   const dataPoint = {};
@@ -21,6 +22,14 @@ while (i < 140) {
 const sampleData = importedSampleData.sampleData.slice();
 for (let j = 0; j < sampleData.length; j += 1) {
   _.assign(sampleData[j], sampleDataPointMetrics[j]);
+}
+
+for (let j = 0; j < sampleData.length; j += 1) {
+  for (let key in albumArt.albumArtList) {
+    if (sampleData[j].artist === key) {
+      sampleData[j].albumArt = albumArt.albumArtList[key];
+    }
+  }
 }
 
 exports.sampleData = sampleData;

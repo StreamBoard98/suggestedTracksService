@@ -8,6 +8,8 @@
   },
   "scripts": {
     "start": "nodemon server/server.js",
+    "d-start": "node server/server.js",
+    "d-react-dev": "webpack -d",
     "react-dev": "webpack -d --watch",
     "test": "jest"
   },
