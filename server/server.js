@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cors = require('cors');
-const mongodatabase = require('../database.js');
+const mongodatabase = require('../database/database.js');
 
 app.listen(4001, () => console.log('App connected on port 4001'));
 
