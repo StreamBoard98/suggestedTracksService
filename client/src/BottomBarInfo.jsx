@@ -18,21 +18,21 @@ class BottomBarInfo extends React.Component {
     if (urlEncodedId[urlEncodedId.length - 1] === '/') {
       urlEncodedId = Number(urlEncodedId.slice(0, urlEncodedId.length - 1));
       this.setState({ urlEncodedId }, () => {
-      let context = this;
-      $.ajax(`http://ec2-18-205-162-203.compute-1.amazonaws.com/songs/${context.state.urlEncodedId}`, { //make this varaible using URL encoded (window gloval location)
-        method: 'GET',
-        error: (error) => {
-          console.log('error with getting data bottom bar', error);
-        },
-        success: (data) => {
-          for (let i = 0; i < data.length; i += 1) {
-            let song = data[i];
-            if (song.id === context.state.urlEncodedId) {
-              context.setState({ currentTrack: song });
+        let context = this;
+        $.ajax(`http://ec2-18-205-162-203.compute-1.amazonaws.com/songs/${context.state.urlEncodedId}`, { //make this varaible using URL encoded (window gloval location)
+          method: 'GET',
+          error: (error) => {
+            console.log('error with getting data bottom bar', error);
+          },
+          success: (data) => {
+            for (let i = 0; i < data.length; i += 1) {
+              let song = data[i];
+              if (song.id === context.state.urlEncodedId) {
+                context.setState({ currentTrack: song });
+              }
             }
-          }
-        },
-      });
+          },
+        });
       });
     }
   }
@@ -47,7 +47,7 @@ class BottomBarInfo extends React.Component {
           </div>
           <div className={styles.artist}>
             <p className={styles.text}>
-              { context.state.currentTrack.artist }         
+              { context.state.currentTrack.artist }        
             </p>
           </div>
           <div className={styles.title}>
