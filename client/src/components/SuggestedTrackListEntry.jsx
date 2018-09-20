@@ -71,22 +71,22 @@ const SuggestedTrackListEntry = (props) => {
           </div>
           <div className={styles.icons}>
             <span className={styles.flexSpan}>
-              <button type="button" className= {styles.bottomIcons}>
+              <button type="button" className={styles.bottomIcons}>
                 <i className="fas fa-play" />
                 &nbsp;
                 { convertToReadable(plays) }
               </button>
-              <button type="button" className= {styles.bottomIcons}>
+              <button type="button" className={styles.bottomIcons}>
                 <i className="far fa-heart" />
                 &nbsp;
                 { convertToReadable(likes) }
               </button>
-              <button type="button" className= {styles.bottomIcons}>
+              <button type="button" className={styles.bottomIcons}>
                 <i className="fas fa-retweet" />
                 &nbsp;
                 { convertToReadable(shares) }
               </button>
-              <button type="button" className= {styles.bottomIcons}>
+              <button type="button" className={styles.bottomIcons}>
                 <i className="fas fa-comment-alt" />
                 &nbsp;
                 { convertToReadable(comments) }
