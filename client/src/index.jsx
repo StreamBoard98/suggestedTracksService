@@ -80,14 +80,12 @@ class App extends React.Component {
     }
     return result;
   }
-  
-  
 
   render() {
     return (
       <div>
         <SuggestedTrackList suggestedTracks={ this.state.suggestedTracks } 
-        convertToReadable = { this.convertToReadable } incrementLikeOrShare = { this.incrementLikeOrShare = this.incrementLikeOrShare.bind(this) } />
+        convertToReadable = { this.convertToReadable = this.convertToReadable.bind(this) } incrementLikeOrShare = { this.incrementLikeOrShare = this.incrementLikeOrShare.bind(this) } />
       </div>
     );
   }
