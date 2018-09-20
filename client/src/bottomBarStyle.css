@@ -1,0 +1,45 @@
+.suggestedTrackEntryBox {
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: rgb(238, 238, 238);
+}
+
+.text {
+  font-size: 12px;
+  font-family: Open Sans;
+  font-weight: normal;
+  margin: -1px;
+  color: rgb(153, 153, 153);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 55px 256px; /*306 width */
+  grid-template-rows: 24px 24px; /*48 height*/
+}
+
+.image {
+  grid-area: 0 / 1 / 0 / 2; /*32x32*/
+  align-self: center;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-bottom: auto;
+  position: relative;
+  /*width: 100%;*/
+}
+
+.title {
+  grid-area: 2 / 3 / 1 / 2;
+  margin-top: 5px;
+}
+
+.artist {
+  grid-area: 2 / 3 / 2 / 2;
+  margin-top: 3px;
+}
+
+.flexSpan {
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+}
