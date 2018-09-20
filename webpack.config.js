@@ -1,6 +1,7 @@
 module.exports = {
  entry: [
    './client/src/index.jsx',
+   './client/src/ArtistSidebar.jsx',
    './client/src/BottomBarInfo.jsx'
  ],
  module: {
